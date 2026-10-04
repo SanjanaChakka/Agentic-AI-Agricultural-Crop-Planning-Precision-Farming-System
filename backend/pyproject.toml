@@ -1,0 +1,124 @@
+[project]
+name = "agentic-ai-precision-farming-backend"
+version = "1.0.0"
+description = "Agentic AI Agricultural Crop Planning & Precision Farming System - backend API"
+requires-python = ">=3.12"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+src = ["app", "scripts", "tests"]
+exclude = [
+    ".venv",
+    "__pycache__",
+    "app/ml/artifacts",
+    "app/rag/index",
+    "reports",
+]
+
+[tool.ruff.lint]
+# The rule set actually enforced by `ruff check`.
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "N",    # pep8-naming
+    "UP",   # pyupgrade
+    "B",    # bugbear
+    "C4",   # comprehensions
+    "SIM",  # simplify
+    "RET",  # return
+    "ARG",  # unused arguments
+    "PTH",  # pathlib
+    "T20",  # no print in library code
+    "DTZ",  # naive datetimes
+    "A",    # builtin shadowing
+    "BLE",  # blind except
+    "ANN",  # missing type annotations
+    "D",    # pydocstyle
+    "EM",   # exception message literals
+    "G",    # logging format
+    "ISC",  # implicit string concat
+    "PL",   # pylint subset
+    "Q",    # quotes
+    "S",    # bandit
+    "SLF",  # private member access
+    "RUF",
+]
+ignore = [
+    # FastAPI dependency injection uses ``request``/``db``-style positional args
+    # in routers and reads better than renames.
+    "B008",
+    # ``Rule`` fastapi dependencies and SQLAlchemy models legitimately build
+    # rich kwargs inline.
+    "RUF012",
+    # Agronomic threshold tables are full of meaningful magic numbers
+    # (field capacity 40.0 % VWC, refill trigger 26.0 % VWC, ...).  Naming every
+    # one of them would obscure the agronomy rather than clarify it.
+    "PLR2004",
+    # The services are deliberately explicit: an evaluate() call with 8 named
+    # arguments is easier to audit than a bundle object.
+    "PLR0913",
+    "PLR0912",
+    "PLR0915",
+    "PLR0911",
+    # Module/class/function docstrings are present where they carry meaning;
+    # pydocstyle's per-object rule would add 285 boilerplate lines.
+    "D100",
+    "D101",
+    "D102",
+    "D103",
+    "D104",
+    "D105",
+    "D107",
+    "D203",
+    "D213",
+    # pytest fixtures read better with plain asserts.
+    "S101",
+    "ANN401",
+    "D401",
+    "COM812",
+    "ISC001",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["T20", "ARG", "SLF001", "PLC0415", "N806", "E501", "ANN"]
+"scripts/*" = ["T20", "PLC0415", "E501"]
+"alembic/*" = ["E501", "D"]
+"app/ml/artifacts/*" = ["ALL"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "scripts"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "tc: mandatory acceptance test cases TC-01 .. TC-06",
+    "integration: exercises several services together",
+    "slow: trains models or hits the network",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning:faiss.*",
+    "ignore::DeprecationWarning:langchain.*",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["app"]
+omit = ["app/ml/artifacts/*", "app/rag/index/*"]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = false

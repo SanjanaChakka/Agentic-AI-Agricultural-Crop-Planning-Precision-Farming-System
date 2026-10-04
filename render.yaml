@@ -1,0 +1,27 @@
+# Render blueprint for the FastAPI backend.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: agri-precision-farming-backend
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        # Create a Render PostgreSQL instance and reference its DSN, e.g.:
+        # value: postgresql+psycopg://user:pass@host:5432/agri
+        sync: false
+      - key: WEATHER_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: CORS_ORIGINS
+        # Set to your deployed frontend origin, e.g. https://agri-app.vercel.app
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.12"

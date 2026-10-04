@@ -1,0 +1,38 @@
+{
+  "soil_moisture_forecast": {
+    "soil_moisture_percent": 0.3055342652851282,
+    "soil_moisture_change_3d": 0.004902092209403085,
+    "soil_temperature_c": 0.5005770905348573,
+    "air_temperature_c": 0.004041488880342018,
+    "humidity_percent": 0.012980955347685267,
+    "wind_speed_ms": 0.00033136321438421664,
+    "rainfall_7d_mm": 0.0733096219745329,
+    "et0_7d_mm": 0.015984889714102286,
+    "crop_stage_index": 0.0015982690603553494,
+    "soil_class_index": 0.03065917625962627,
+    "latitude": 0.002488819247947389,
+    "expected_rainfall_next_3d_mm": 0.0475919682716357
+  },
+  "environmental_risk_classifier": {
+    "temp_min_c": 0.0036754279622801035,
+    "temp_max_c": 0.015377296120896403,
+    "temp_mean_c": 0.00750228689876153,
+    "humidity_mean_percent": 0.007635071255405758,
+    "humidity_min_percent": 0.002202857439049646,
+    "wind_speed_ms": 0.0013654368366770972,
+    "rainfall_1d_mm": 0.005382234243653859,
+    "rainfall_3d_mm": 0.0546984710698908,
+    "rainfall_7d_mm": 0.022964675331174203,
+    "wet_day_fraction_7d": 0.005807860417321669,
+    "et0_7d_mm": 0.006585930792449505,
+    "soil_moisture_percent": 0.1778230381580618,
+    "soil_moisture_change_3d": 0.006620203651376248,
+    "crop_stage_index": 0.0016823369800379167,
+    "soil_class_index": 0.013404223647864632,
+    "latitude": 0.019617946455437928,
+    "heat_margin_c": 0.09166529294920432,
+    "moisture_margin_percent": 0.38836110841869914,
+    "humidity_margin_percent": 0.012908047341658168,
+    "heavy_rain_margin_mm": 0.15472025403009937
+  }
+}
