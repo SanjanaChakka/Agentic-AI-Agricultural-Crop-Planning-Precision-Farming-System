@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-10-04T05:39:56.906596+00:00",
+  "seed": 20240517,
+  "model_version": "1.0.0",
+  "dataset": {
+    "type": "physically simulated soil water balance (FAO-56 style)",
+    "seasons": 420,
+    "grouped_split": "whole seasons held out (20%)",
+    "seed": 20240517,
+    "crop_keys": [
+      "rice",
+      "wheat",
+      "maize",
+      "sorghum",
+      "cotton",
+      "groundnut",
+      "chickpea",
+      "tomato",
+      "soybean",
+      "pearl_millet",
+      "finger_millet",
+      "pigeonpea",
+      "mustard",
+      "potato"
+    ],
+    "soil_types": [
+      "sandy",
+      "sandy_loam",
+      "loam",
+      "silt_loam",
+      "clay_loam",
+      "clay",
+      "black_soil",
+      "red_soil",
+      "red_laterite",
+      "alluvial"
+    ],
+    "climates": [
+      "monsoon",
+      "winter",
+      "humid_tropical",
+      "semi_arid"
+    ],
+    "moisture_rows": 70140,
+    "risk_rows": 70140,
+    "risk_class_distribution": {
+      "none": 11786,
+      "low": 5036,
+      "moderate": 11284,
+      "high": 42034
+    }
+  },
+  "models": [
+    {
+      "task": "soil_moisture_forecast",
+      "model_name": "RandomForestRegressor",
+      "algorithm": "Random forest regression ensemble",
+      "target": "soil_moisture_percent_volumetric_day_7",
+      "features": [
+        "soil_moisture_percent",
+        "soil_moisture_change_3d",
+        "soil_temperature_c",
+        "air_temperature_c",
+        "humidity_percent",
+        "wind_speed_ms",
+        "rainfall_7d_mm",
+        "et0_7d_mm",
+        "crop_stage_index",
+        "soil_class_index",
+        "latitude",
+        "expected_rainfall_next_3d_mm"
+      ],
+      "hyperparameters": {
+        "n_estimators": 90,
+        "max_depth": 12,
+        "min_samples_leaf": 6,
+        "max_features": "sqrt"
+      },
+      "metrics": {
+        "mae": 0.35232063601439784,
+        "rmse": 0.6044236865948386,
+        "r2": 0.9966794975841347,
+        "train_samples": 56112,
+        "test_samples": 14028
+      },
+      "documentation": "Predicts root-zone volumetric soil moisture seven days ahead from current moisture, recent rainfall, reference evapotranspiration, weather and crop-stage features. Used by the irrigation planning agent to estimate how long the current profile lasts."
+    },
+    {
+      "task": "environmental_risk_classification",
+      "model_name": "RandomForestClassifier",
+      "algorithm": "Random forest classification ensemble (class_weight=balanced)",
+      "target": "environmental_risk_severity_bucket (none/low/moderate/high)",
+      "features": [
+        "temp_min_c",
+        "temp_max_c",
+        "temp_mean_c",
+        "humidity_mean_percent",
+        "humidity_min_percent",
+        "wind_speed_ms",
+        "rainfall_1d_mm",
+        "rainfall_3d_mm",
+        "rainfall_7d_mm",
+        "wet_day_fraction_7d",
+        "et0_7d_mm",
+        "soil_moisture_percent",
+        "soil_moisture_change_3d",
+        "crop_stage_index",
+        "soil_class_index",
+        "latitude",
+        "heat_margin_c",
+        "moisture_margin_percent",
+        "humidity_margin_percent",
+        "heavy_rain_margin_mm"
+      ],
+      "hyperparameters": {
+        "n_estimators": 110,
+        "max_depth": 12,
+        "min_samples_leaf": 6,
+        "max_features": "sqrt"
+      },
+      "metrics": {
+        "accuracy": 0.9739093242087254,
+        "macro_f1": 0.9593591001035034,
+        "train_samples": 56112,
+        "test_samples": 14028,
+        "classification_report": {
+          "none": {
+            "precision": 0.9747829681686647,
+            "recall": 0.9687756778964667,
+            "f1-score": 0.9717700391510405,
+            "support": 2434.0
+          },
+          "low": {
+            "precision": 0.8717557251908397,
+            "recall": 0.9870354364736387,
+            "f1-score": 0.9258208350222943,
+            "support": 1157.0
+          },
+          "moderate": {
+            "precision": 0.943018703784254,
+            "recall": 0.9605671245015507,
+            "f1-score": 0.95171202809482,
+            "support": 2257.0
+          },
+          "high": {
+            "precision": 0.99925,
+            "recall": 0.9772616136919315,
+            "f1-score": 0.988133498145859,
+            "support": 8180.0
+          },
+          "accuracy": 0.9739093242087254,
+          "macro avg": {
+            "precision": 0.9472018492859395,
+            "recall": 0.9734099631408969,
+            "f1-score": 0.9593591001035034,
+            "support": 14028.0
+          },
+          "weighted avg": {
+            "precision": 0.975442068221371,
+            "recall": 0.9739093242087254,
+            "f1-score": 0.9742949132918138,
+            "support": 14028.0
+          }
+        },
+        "confusion_matrix": {
+          "labels": [
+            "none",
+            "low",
+            "moderate",
+            "high"
+          ],
+          "matrix": [
+            [
+              2358,
+              76,
+              0,
+              0
+            ],
+            [
+              12,
+              1142,
+              3,
+              0
+            ],
+            [
+              15,
+              68,
+              2168,
+              6
+            ],
+            [
+              34,
+              24,
+              128,
+              7994
+            ]
+          ]
+        }
+      },
+      "documentation": "Aggregates heat, water-deficit, heavy-rain and disease-favourability hazards, including their interactions (heat amplifying water stress, wet weather amplifying disease risk), into a single severity bucket that complements the explicit threshold rules."
+    }
+  ],
+  "limitations": [
+    "Training data is simulated with an FAO-56 style water balance model, so reported metrics measure how well the model reproduces that process, not real-world field accuracy.",
+    "The risk classifier learns an explicit severity formula from the simulator; it generalises across crop and soil combinations but cannot add information that is absent from its inputs.",
+    "Field calibration against real sensor logs remains necessary before operational irrigation control."
+  ]
+}

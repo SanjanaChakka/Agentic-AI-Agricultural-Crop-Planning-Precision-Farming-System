@@ -1,0 +1,38 @@
+# Keep the build context small and never ship secrets or artefacts into an image.
+
+.git/
+.gitignore
+**/.venv/
+**/node_modules/
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/.ruff_cache/
+**/.mypy_cache/
+**/.coverage
+**/htmlcov/
+
+# Secrets - baked into images by accident often enough to be worth blocking.
+**/.env
+**/.env.local
+**/*.pem
+**/*.key
+
+# Generated at image build time (see Dockerfile.backend) or regenerable.
+backend/app/ml/artifacts/*.joblib
+backend/app/ml/artifacts/*.pkl
+backend/app/ml/rag_index/
+backend/agri.db
+backend/reports/
+backend/artifacts/
+
+# Local runtime noise.
+backend/*.log
+backend/server.pid
+**/*.tsbuildinfo
+frontend/dist/
+frontend/coverage/
+
+# Docs and deployment config are not needed inside the images.
+README.md
+docs/

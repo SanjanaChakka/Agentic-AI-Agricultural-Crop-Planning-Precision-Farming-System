@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------------
+# Agentic AI Agricultural Crop Planning & Precision Farming System - backend
+# Python 3.12
+# ---------------------------------------------------------------------------
+
+# --- Web framework ---------------------------------------------------------
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+# --- Settings / validation -------------------------------------------------
+pydantic==2.10.4
+pydantic-settings==2.7.1
+
+# --- Persistence -----------------------------------------------------------
+SQLAlchemy==2.0.36
+alembic==1.14.0
+psycopg[binary]==3.2.3          # PostgreSQL driver (optional, needed for prod)
+
+# --- HTTP client (weather API + LLM provider) -----------------------------
+httpx==0.28.1
+
+# --- Machine learning ------------------------------------------------------
+scikit-learn==1.6.0
+numpy==2.2.1
+joblib==1.4.2
+
+# --- Agent orchestration ---------------------------------------------------
+langgraph==0.2.60
+langchain-core==0.3.28
+
+# --- Retrieval (agricultural RAG) -----------------------------------------
+faiss-cpu==1.12.0               # >=1.11 required for CPython 3.13 wheels
+
+# --- Reporting -------------------------------------------------------------
+reportlab==4.2.5
+
+# --- Testing / linting -----------------------------------------------------
+pytest==8.3.4
+pytest-cov==6.0.0
+ruff==0.8.6

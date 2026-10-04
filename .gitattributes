@@ -1,0 +1,39 @@
+# Normalise line endings so the working tree is consistent on Windows and Linux
+# and so diffs are not polluted with whole-file CRLF changes.
+* text=auto eol=lf
+
+# Files that must stay LF even on Windows.
+*.py text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.js text eol=lf
+*.mjs text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.txt text eol=lf
+*.sql text eol=lf
+Dockerfile.backend text eol=lf
+Dockerfile text eol=lf
+
+# Windows wrapper scripts must keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Never touch these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.joblib binary
+*.faiss binary
+*.db binary
+*.pkl binary
