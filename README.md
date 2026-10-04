@@ -147,6 +147,27 @@ source document.
 
 ## Quick start
 
+### Option 0 — just run it (recommended)
+
+Requires [Docker Desktop](https://www.docker.com/products/docker-desktop) and
+nothing else. No API keys, no database server, no Python or Node install.
+
+| OS | Do this |
+| --- | --- |
+| Windows | extract the zip, double-click **`start.bat`** |
+| macOS / Linux | extract, then `chmod +x start.sh && ./start.sh` |
+
+The launcher checks Docker, picks a free port (8080 if available, otherwise the
+next one up), builds the images, starts the stack **with demo data seeded**, waits
+for the backend to report healthy and opens your browser. First run takes several
+minutes because the backend image is ~1 GB — it bundles the RAG index and the
+trained ML models. Later runs start in seconds.
+
+To stop it, run `stop.bat` (or `./stop.sh`). Your data lives in a Docker volume
+and survives a stop/start; `stop.sh --purge` deletes it.
+
+### Option 1 — run from source
+
 Prerequisites: **Python ≥ 3.12** and **Node ≥ 20**. No API keys and no database
 server are required — the system boots fully offline.
 
