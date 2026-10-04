@@ -166,7 +166,7 @@ health probe at `/api/v1/health/ready`. On first boot the app creates the schema
 builds the FAISS index, loads the bundled ML models and seeds demo data.
 
 ```bash
-# 2. Frontend (second terminal)
+# 2. Frontend
 cd frontend
 npm install
 npm run dev
@@ -175,6 +175,9 @@ npm run dev
 The UI is at `http://localhost:5173`. Vite proxies `/api` to the backend, so the
 browser never makes a cross-origin request and no CORS configuration is needed in
 development.
+
+> **Prefer containers?** `docker compose up --build` serves the same app on
+> `http://localhost:8080` — see [Deployment](#deployment).
 
 ### Regenerating derived artefacts
 
@@ -320,13 +323,31 @@ Tailwind CSS, Vitest + Testing Library, ESLint.
 ## Deployment
 
 ```bash
-cp .env.example .env      # set POSTGRES_PASSWORD and CORS_ORIGINS
+cp .env.example .env
 docker compose up --build
 ```
 
 The UI comes up on `http://localhost:8080` and nginx reverse-proxies `/api` to the
 backend, so the browser sees a single origin and CORS never enters the picture.
 The backend is also published directly on `:8000` for API clients.
+
+> **Port already in use?** Both ports are overridable. On a machine where
+> something else already owns `8080` (an Oracle TNS listener, for instance, takes
+> the IPv4 wildcard port and can shadow Docker's IPv6-only bind), run:
+>
+> ```bash
+> FRONTEND_PORT=8090 BACKEND_PORT=8001 docker compose up --build
+> ```
+>
+> If a *host* `uvicorn` is already running on `:8000`, stop it first — otherwise
+> `localhost:8000` is ambiguous and you may not know which backend you are
+> looking at.
+
+To see a populated app rather than an empty one, add demo data:
+
+```bash
+SEED_DEMO_DATA_ON_STARTUP=true docker compose up --build
+```
 
 | File | Purpose |
 |---|---|
@@ -346,15 +367,18 @@ Notes on the container setup:
 - The models are trained during the image build, so first request is fast. For a
   slimmer image, build with `--build-arg TRAIN_AT_BUILD=false`; the app then
   trains on first boot and still degrades to rule-only reasoning if it cannot.
-- To use PostgreSQL rather than SQLite, add `POSTGRES_PASSWORD` to `.env` and run
+- To use PostgreSQL rather than SQLite, set `POSTGRES_PASSWORD` and run
   `docker compose --profile postgres up --build` with
   `DATABASE_URL=postgresql+psycopg://agri_user:...@db:5432/agri`, then
-  `docker compose exec backend alembic upgrade head`.
+  `docker compose exec backend alembic upgrade head`. That variable is deliberately
+  *not* a hard compose requirement, so the default SQLite stack keeps working
+  without it.
 
-> The Docker configuration is validated (`docker compose config` passes and the
-> required-variable guards fire) but **the images have not been built** — no
-> Docker daemon was available in the authoring environment. Build them before
-> relying on this path.
+> Both images build successfully and the stack runs. Verified on Docker 29.6.1:
+> `agri-backend` (Python 3.13-slim, trains on build) and `agri-frontend`
+> (node:22-alpine build → nginx:1.27-alpine). The backend answers
+> `/api/v1/health/ready` with `{"database":true,"rag":true,"ml":true}` and the
+> frontend proxies `/api` through to it.
 
 ## Known limitations
 

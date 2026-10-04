@@ -1,59 +1,14 @@
 import { ShieldAlert } from 'lucide-react';
-import { Badge, toneForSeverity, type BadgeTone } from './Badge';
-import { humaniseToken } from '../../lib/format';
-import { containsDiagnosisLanguage } from '../../api/risk';
+import { Badge } from './Badge';
+import { safeSeverityLabel, safeSeverityTone } from './severityPresentation';
 
 /**
  * Severity badge for environmental risk findings.
  *
- * Two hard rules:
- *  1. It renders *severity*, never a diagnostic claim. "High" means the
- *     environmental conditions are unfavourable, not that anything is
- *     confirmed, present or identified.
- *  2. Any incoming string that would smuggle diagnosis language onto the screen
- *     is replaced with `unrated`. This is enforced here, not just by convention,
- *     so a backend regression cannot leak diagnosis wording into the UI.
+ * Renders *severity*, never a diagnostic claim: "High" means the environmental
+ * conditions are unfavourable, not that anything is confirmed or identified.
+ * The wording rules themselves live in `severityPresentation.ts`.
  */
-const FORBIDDEN_OUTPUT = /confirm|diagnos|detect|present|positiv|identif|infect/i;
-
-/** Severity bands that carry an explicit "environmental conditions" frame. */
-const SEVERITY_LABEL: Record<string, string> = {
-  none: 'None expected',
-  none_expected: 'None expected',
-  low: 'Low',
-  moderate: 'Moderate',
-  medium: 'Medium',
-  high: 'High',
-  critical: 'Critical',
-  severe: 'Severe',
-};
-
-const SEVERITY_TONE: Record<string, BadgeTone> = {
-  none: 'neutral',
-  none_expected: 'neutral',
-  low: 'info',
-  moderate: 'warning',
-  medium: 'warning',
-  high: 'danger',
-  critical: 'danger',
-  severe: 'danger',
-};
-
-/** Safe severity text. Never contains diagnosis language. */
-export function safeSeverityLabel(severity: string | null | undefined): string {
-  if (!severity) return 'Unrated';
-  const key = severity.trim().toLowerCase();
-  const label = SEVERITY_LABEL[key];
-  if (label) return label;
-  if (FORBIDDEN_OUTPUT.test(key) || containsDiagnosisLanguage(key)) return 'Unrated';
-  return humaniseToken(key, 'Unrated');
-}
-
-export function safeSeverityTone(severity: string | null | undefined): BadgeTone {
-  const key = (severity ?? '').trim().toLowerCase();
-  return SEVERITY_TONE[key] ?? toneForSeverity(key);
-}
-
 export interface RiskBadgeProps {
   severity: string | null | undefined;
   /** Rendered as an accessible suffix, e.g. "conditions severity". */

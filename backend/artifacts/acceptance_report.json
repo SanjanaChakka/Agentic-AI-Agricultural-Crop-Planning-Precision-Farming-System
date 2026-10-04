@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-04T14:15:07+00:00",
+  "generated_at": "2026-10-04T18:03:23+00:00",
   "total_cases": 6,
   "passed": 6,
   "failed": 0,
@@ -37,8 +37,8 @@
           "water_availability": "moderate",
           "water_availability_m3_per_day": 180.0,
           "notes": "Vertisol with high clay content; irrigate only on measured depletion.",
-          "created_at": "2026-10-04T14:14:29.860152Z",
-          "updated_at": "2026-10-04T14:14:29.860160Z"
+          "created_at": "2026-10-04T18:02:46.558896Z",
+          "updated_at": "2026-10-04T18:02:46.558906Z"
         },
         "soil_response_status": 200,
         "soil_observation_id": 6,
@@ -198,7 +198,7 @@
         {
           "check": "Submitting a lab observation returns 201",
           "passed": true,
-          "detail": "HTTP 201 {\"observation\":{\"id\":7,\"field_id\":1,\"observed_at\":\"2026-10-04T14:14:48.337296Z\",\"sample_depth_cm\":20.0,\"soil_type\":\"sandy_loam\",\"ph\":8.4,\"nitrogen_available_kg_ha\":137.5,\"phosphorus_available_kg_ha\":n"
+          "detail": "HTTP 201 {\"observation\":{\"id\":7,\"field_id\":1,\"observed_at\":\"2026-10-04T18:03:08.182536Z\",\"sample_depth_cm\":20.0,\"soil_type\":\"sandy_loam\",\"ph\":8.4,\"nitrogen_available_kg_ha\":137.5,\"phosphorus_available_kg_ha\":n"
         },
         {
           "check": "AI interpretation of the submitted sample",
@@ -588,8 +588,8 @@
         "Urgency: high",
         "requires_human_authorisation: True",
         "authorisation_state before review: not_authorised",
-        "Estimated depth (mm): 44.5",
-        "Estimated volume (m3): 186.9",
+        "Estimated depth (mm): 44.9",
+        "Estimated volume (m3): 188.6",
         "Rules evaluated: [moisture_below_critical, ml_soil_moisture_crosscheck, data_provenance]",
         "Safety contract - approved: Authorises the recorded plan and moves its activities to 'scheduled'.",
         "Safety contract - never: This system has no code path that actuates a valve, pump or any other physical equipment. Approval authorises documentation only.",
@@ -598,7 +598,7 @@
         "Approval reviewer: (unassigned)",
         "Approval status after decision: approved",
         "Reviewer recorded: Priya Raghavan (Agronomist)",
-        "Decision timestamp: 2026-10-04T14:14:58.652758Z",
+        "Decision timestamp: 2026-10-04T18:03:16.534422Z",
         "Irrigation activity after approval: [scheduled, Priya Raghavan (Agronomist)]",
         "Run status after approval: completed"
       ],
@@ -609,7 +609,7 @@
       "evidence": [
         {
           "label": "Measured soil moisture",
-          "value": 13.3,
+          "value": 13.05,
           "unit": "% VWC",
           "kind": "simulated",
           "source": "sensor SM-01",
@@ -633,7 +633,7 @@
         },
         {
           "label": "ML 7-day soil moisture forecast",
-          "value": 31.08,
+          "value": 31.26,
           "unit": "% VWC",
           "kind": "ml_prediction",
           "source": "RandomForestRegressor v1.0.0",
@@ -645,7 +645,7 @@
         {
           "check": "Irrigation assessment returns 201",
           "passed": true,
-          "detail": "HTTP 201 {\"id\":2,\"field_id\":1,\"workflow_run_id\":null,\"recommendation\":\"consider_irrigation\",\"urgency\":\"high\",\"requires_human_authorisation\":true,\"authorisation_state\":\"not_authorised\",\"estimated_water_mm\":44.5"
+          "detail": "HTTP 201 {\"id\":2,\"field_id\":1,\"workflow_run_id\":null,\"recommendation\":\"consider_irrigation\",\"urgency\":\"high\",\"requires_human_authorisation\":true,\"authorisation_state\":\"not_authorised\",\"estimated_water_mm\":44.9"
         },
         {
           "check": "Recommendation",
@@ -670,12 +670,12 @@
         {
           "check": "Estimated depth (mm)",
           "passed": true,
-          "detail": "44.5"
+          "detail": "44.9"
         },
         {
           "check": "Estimated volume (m3)",
           "passed": true,
-          "detail": "186.9"
+          "detail": "188.6"
         },
         {
           "check": "Rules evaluated",
@@ -735,7 +735,7 @@
         {
           "check": "Approval decision accepted",
           "passed": true,
-          "detail": "HTTP 200 {\"id\":3,\"workflow_run_id\":3,\"field_id\":1,\"title\":\"Authorise irrigation of 44.5 mm on field 1 for cotton\",\"action_type\":\"irrigation_plan\",\"recommendation\":{\"action_type\":\"irrigation\",\"field_id\":1,\"crop"
+          "detail": "HTTP 200 {\"id\":3,\"workflow_run_id\":3,\"field_id\":1,\"title\":\"Authorise irrigation of 44.9 mm on field 1 for cotton\",\"action_type\":\"irrigation_plan\",\"recommendation\":{\"action_type\":\"irrigation\",\"field_id\":1,\"crop"
         },
         {
           "check": "Approval status after decision",
@@ -750,7 +750,7 @@
         {
           "check": "Decision timestamp",
           "passed": true,
-          "detail": "2026-10-04T14:14:58.652758Z"
+          "detail": "2026-10-04T18:03:16.534422Z"
         },
         {
           "check": "Irrigation activity after approval",
@@ -796,7 +796,7 @@
         "ml_risk_prediction": {
           "model_name": "RandomForestClassifier",
           "prediction_label": "high",
-          "confidence": 0.9713
+          "confidence": 0.9854
         }
       },
       "expected": [
@@ -810,11 +810,11 @@
       "actual": [
         "Overall risk level: high",
         "Disclaimer: These findings describe environmental conditions only. The system has no diagnostic capability: no disease, pest or nutrient disorder is diagnosed here. Confirm anything through field scouting and, where necessary, laboratory testing.",
-        "Finding statements: [Environmental conditions favourable for water stress: measured soil moisture 13.3% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]",
+        "Finding statements: [Environmental conditions favourable for water stress: measured soil moisture 13.05% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]",
         "Severities: [water_stress=high]",
         "ML model: RandomForestClassifier",
         "ML predicted severity: high",
-        "ML confidence: 0.9713",
+        "ML confidence: 0.9854",
         "ML features actually fed to the model: [crop_stage_index, et0_7d_mm, heat_margin_c, heavy_rain_margin_mm, humidity_margin_percent, humidity_mean_percent]",
         "Rule-based worst severity: [high]"
       ],
@@ -826,7 +826,7 @@
       "evidence": [
         {
           "label": "Measured soil moisture",
-          "value": 13.3,
+          "value": 13.05,
           "unit": "% VWC",
           "kind": "simulated",
           "source": "sensor SM-01",
@@ -834,7 +834,7 @@
         },
         {
           "label": "Moisture change over monitoring window",
-          "value": -9.58,
+          "value": -9.88,
           "unit": "%VWC",
           "kind": "observed",
           "source": null,
@@ -874,7 +874,7 @@
         {
           "check": "Finding statements",
           "passed": true,
-          "detail": "[Environmental conditions favourable for water stress: measured soil moisture 13.3% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]"
+          "detail": "[Environmental conditions favourable for water stress: measured soil moisture 13.05% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]"
         },
         {
           "check": "Severities",
@@ -914,7 +914,7 @@
         {
           "check": "ML scoring endpoint runs with no request body",
           "passed": true,
-          "detail": "HTTP 201 [{\"id\":9,\"field_id\":1,\"workflow_run_id\":null,\"model_name\":\"RandomForestRegressor\",\"model_version\":\"1.0.0\",\"task\":\"soil_moisture_forecast\",\"status\":\"ok\",\"prediction_value\":31.08,\"prediction_label\":null"
+          "detail": "HTTP 201 [{\"id\":9,\"field_id\":1,\"workflow_run_id\":null,\"model_name\":\"RandomForestRegressor\",\"model_version\":\"1.0.0\",\"task\":\"soil_moisture_forecast\",\"status\":\"ok\",\"prediction_value\":31.26,\"prediction_label\":null"
         },
         {
           "check": "Both trained models answered",
@@ -934,7 +934,7 @@
         {
           "check": "ML confidence",
           "passed": true,
-          "detail": "0.9713"
+          "detail": "0.9854"
         },
         {
           "check": "ML prediction is attributed to the trained model, not invented",
@@ -978,62 +978,62 @@
           {
             "agent": "farm_field_profile_agent",
             "status": "succeeded",
-            "ms": 5.53
+            "ms": 11.48
           },
           {
             "agent": "soil_nutrient_agent",
             "status": "succeeded",
-            "ms": 2.16
+            "ms": 4.54
           },
           {
             "agent": "sensor_telemetry_agent",
             "status": "succeeded",
-            "ms": 3.23
+            "ms": 8.48
           },
           {
             "agent": "weather_climate_agent",
             "status": "succeeded",
-            "ms": 1962.54
+            "ms": 1871.53
           },
           {
             "agent": "weather_bundle_bridge",
             "status": "succeeded",
-            "ms": 0.18
+            "ms": 0.7
           },
           {
             "agent": "knowledge_retrieval_agent",
             "status": "succeeded",
-            "ms": 35.24
+            "ms": 97.11
           },
           {
             "agent": "crop_suitability_agent",
             "status": "succeeded",
-            "ms": 0.98
+            "ms": 4.11
           },
           {
             "agent": "ml_forecast_agent",
             "status": "succeeded",
-            "ms": 90.04
+            "ms": 136.68
           },
           {
             "agent": "irrigation_agent",
             "status": "succeeded",
-            "ms": 8.5
+            "ms": 8.51
           },
           {
             "agent": "crop_risk_advisory_agent",
             "status": "succeeded",
-            "ms": 9.87
+            "ms": 12.77
           },
           {
             "agent": "activity_planner_agent",
             "status": "succeeded",
-            "ms": 3.81
+            "ms": 5.89
           },
           {
             "agent": "advisory_narrative_agent",
             "status": "succeeded",
-            "ms": 0.5
+            "ms": 0.59
           }
         ],
         "report_id": 2
@@ -1056,12 +1056,12 @@
         "Activities planned: [field_scouting:planned, irrigation:planned, soil_testing:planned]",
         "Citations in summary: [soil.texture_and_water_holding, crops.rice, crops.cotton, soil.soil_ph_and_fertility, crops.tomato, irrigation.water_requirements_by_stage, irrigation.scheduling_principles, risk.disease_favourable_environment]",
         "Report status: ready",
-        "Report file name: RKF-01-North-Black-Cotton-Plot-20261004T141506Z-a3761e.pdf",
-        "Report size (bytes): 26484",
+        "Report file name: RKF-01-North-Black-Cotton-Plot-20261004T180322Z-a3761e.pdf",
+        "Report size (bytes): 26496",
         "Report pages: 8",
         "Sections: [1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)",
         "Download URL: /api/v1/reports/2/download",
-        "PDF characters extracted: 17624"
+        "PDF characters extracted: 17632"
       ],
       "agents_invoked": [
         "activity_planner_agent",
@@ -1152,7 +1152,7 @@
         },
         {
           "label": "Sensor soil moisture (simulated)",
-          "value": 13.3,
+          "value": 13.05,
           "unit": "% VWC",
           "kind": "simulated",
           "source": "sensor SM-01",
@@ -1160,7 +1160,7 @@
         },
         {
           "label": "Sensor soil temperature (simulated)",
-          "value": 28.54,
+          "value": 29.42,
           "unit": "deg C",
           "kind": "simulated",
           "source": "sensor SM-01",
@@ -1168,7 +1168,7 @@
         },
         {
           "label": "Sensor air humidity (simulated)",
-          "value": 63.36,
+          "value": 66.19,
           "unit": "%",
           "kind": "simulated",
           "source": "sensor SM-01",
@@ -1324,7 +1324,7 @@
         {
           "check": "Report generation accepted",
           "passed": true,
-          "detail": "HTTP 201 {\"id\":2,\"farm_id\":1,\"field_id\":1,\"workflow_run_id\":4,\"title\":\"Precision farming report - North Black Cotton Plot (cotton)\",\"status\":\"ready\",\"file_name\":\"RKF-01-North-Black-Cotton-Plot-20261004T141506Z"
+          "detail": "HTTP 201 {\"id\":2,\"farm_id\":1,\"field_id\":1,\"workflow_run_id\":4,\"title\":\"Precision farming report - North Black Cotton Plot (cotton)\",\"status\":\"ready\",\"file_name\":\"RKF-01-North-Black-Cotton-Plot-20261004T180322Z"
         },
         {
           "check": "Report status",
@@ -1334,12 +1334,12 @@
         {
           "check": "Report file name",
           "passed": true,
-          "detail": "RKF-01-North-Black-Cotton-Plot-20261004T141506Z-a3761e.pdf"
+          "detail": "RKF-01-North-Black-Cotton-Plot-20261004T180322Z-a3761e.pdf"
         },
         {
           "check": "Report size (bytes)",
           "passed": true,
-          "detail": "26484"
+          "detail": "26496"
         },
         {
           "check": "Report pages",
@@ -1379,12 +1379,12 @@
         {
           "check": "PDF is not an empty stub",
           "passed": true,
-          "detail": "26484 bytes"
+          "detail": "26496 bytes"
         },
         {
           "check": "PDF exists on disk",
           "passed": true,
-          "detail": "D:\\pip-temp\\agri-pytest-_lu3hv9_\\reports\\RKF-01-North-Black-Cotton-Plot-20261004T141506Z-a3761e.pdf"
+          "detail": "D:\\pip-temp\\agri-pytest-13nlfdvd\\reports\\RKF-01-North-Black-Cotton-Plot-20261004T180322Z-a3761e.pdf"
         },
         {
           "check": "File on disk matches the downloaded bytes",
@@ -1399,7 +1399,7 @@
         {
           "check": "PDF characters extracted",
           "passed": true,
-          "detail": "17624"
+          "detail": "17632"
         },
         {
           "check": "PDF uses the non-diagnostic risk wording",

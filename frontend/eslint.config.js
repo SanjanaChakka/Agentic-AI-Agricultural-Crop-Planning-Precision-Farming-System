@@ -19,7 +19,21 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      // React Fast Refresh only preserves state when a module exports components
+      // and nothing else, so domain helpers (badge tones, nav model, evidence
+      // metadata) live in their own modules.
+      //
+      // `allowExportNames` exempts the consumer hooks of a context provider.
+      // Colocating `useToast` with `ToastProvider` is the idiomatic React
+      // pattern; splitting them would add a module hop and invite an import
+      // cycle for no benefit.
+      'react-refresh/only-export-components': [
+        'warn',
+        {
+          allowConstantExport: true,
+          allowExportNames: ['useToast', 'useSelection'],
+        },
+      ],
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',

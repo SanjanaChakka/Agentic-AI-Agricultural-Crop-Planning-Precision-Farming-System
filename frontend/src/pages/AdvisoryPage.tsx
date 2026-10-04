@@ -16,7 +16,8 @@ import {
 import { PageHeader } from '../components/ui/PageHeader';
 import { Card, CardHeader } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
-import { Badge, StatusBadge, toneForStatus } from '../components/ui/Badge';
+import { Badge, StatusBadge } from '../components/ui/Badge';
+import { toneForStatus } from '../components/ui/badgeTones';
 import { EmptyState } from '../components/ui/EmptyState';
 import { ErrorBanner } from '../components/ui/ErrorBanner';
 import { Checkbox, FieldGroup, FieldRow, FormGrid, TextArea, TextInput } from '../components/ui/Field';

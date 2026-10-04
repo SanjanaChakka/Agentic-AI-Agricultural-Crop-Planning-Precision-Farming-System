@@ -2,7 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Compass } from 'lucide-react';
 import { PageHeader } from '../components/ui/PageHeader';
 import { Card, CardHeader } from '../components/ui/Card';
-import { NAV_ITEMS } from '../components/layout/SidebarNav';
+import { NAV_ITEMS } from '../components/layout/navItems';
 
 /** Catch-all route. No dead end: every primary destination is one click away. */
 export function NotFoundPage() {

@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import { EvidenceKindBadge, EVIDENCE_KIND_META, evidenceKindMeta } from './EvidenceKindBadge';
-import { RiskBadge, safeSeverityLabel } from './RiskBadge';
+import { EvidenceKindBadge } from './EvidenceKindBadge';
+import { EVIDENCE_KIND_META, evidenceKindMeta } from './evidenceKindMeta';
+import { RiskBadge } from './RiskBadge';
+import { safeSeverityLabel } from './severityPresentation';
 import { EVIDENCE_KINDS } from '../../api/types';
 
 /**

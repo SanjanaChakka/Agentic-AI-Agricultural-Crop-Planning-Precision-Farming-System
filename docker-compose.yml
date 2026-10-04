@@ -11,7 +11,12 @@ services:
     profiles: ["postgres"]
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-agri_user}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      # No `:?` guard here on purpose. A hard requirement would make *every*
+      # compose command - including `ps` and `logs` for the default SQLite
+      # stack - fail for a variable only this optional profile needs. Postgres
+      # itself refuses to start with an empty password, which is the right place
+      # for that error to surface.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
       POSTGRES_DB: ${POSTGRES_DB:-agri}
     volumes:
       - pgdata:/var/lib/postgresql/data
