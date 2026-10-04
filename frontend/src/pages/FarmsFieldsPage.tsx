@@ -343,6 +343,8 @@ function CreateFarmForm({
     district: '',
     state: '',
     total_area_ha: '',
+    latitude: '',
+    longitude: '',
     notes: '',
   });
 
@@ -357,6 +359,8 @@ function CreateFarmForm({
         district: form.district.trim() || null,
         state: form.state.trim() || null,
         total_area_ha: form.total_area_ha ? Number(form.total_area_ha) : null,
+        latitude: form.latitude ? Number(form.latitude) : null,
+        longitude: form.longitude ? Number(form.longitude) : null,
         notes: form.notes.trim() || null,
       },
       {
@@ -370,6 +374,8 @@ function CreateFarmForm({
             district: '',
             state: '',
             total_area_ha: '',
+            latitude: '',
+            longitude: '',
             notes: '',
           });
           onCreated(farm);
@@ -465,6 +471,37 @@ function CreateFarmForm({
               />
             )}
           </FieldRow>
+          <FieldRow
+            label="Latitude"
+            hint="Optional. Every field on this farm inherits it when the field has no coordinates of its own."
+          >
+            {(id) => (
+              <TextInput
+                id={id}
+                type="number"
+                step="0.01"
+                min="-90"
+                max="90"
+                value={form.latitude}
+                placeholder="16.99"
+                onChange={(event) => setForm({ ...form, latitude: event.target.value })}
+              />
+            )}
+          </FieldRow>
+          <FieldRow label="Longitude" hint="Optional. Both coordinates must be set together.">
+            {(id) => (
+              <TextInput
+                id={id}
+                type="number"
+                step="0.01"
+                min="-180"
+                max="180"
+                value={form.longitude}
+                placeholder="82.25"
+                onChange={(event) => setForm({ ...form, longitude: event.target.value })}
+              />
+            )}
+          </FieldRow>
         </FormGrid>
         <FieldRow label="Notes">
           {(id) => (
@@ -508,6 +545,8 @@ function CreateFieldForm({
     irrigation_source: IRRIGATION_SOURCES[0],
     water_availability: WATER_AVAILABILITY[1],
     water_availability_m3_per_day: '',
+    latitude: '',
+    longitude: '',
     notes: '',
   });
 
@@ -529,6 +568,8 @@ function CreateFieldForm({
           water_availability_m3_per_day: form.water_availability_m3_per_day
             ? Number(form.water_availability_m3_per_day)
             : null,
+          latitude: form.latitude ? Number(form.latitude) : null,
+          longitude: form.longitude ? Number(form.longitude) : null,
           notes: form.notes.trim() || null,
         },
       },
@@ -615,6 +656,37 @@ function CreateFieldForm({
                 id={id}
                 value={form.previous_crop}
                 onChange={(event) => setForm({ ...form, previous_crop: event.target.value })}
+              />
+            )}
+          </FieldRow>
+          <FieldRow
+            label="Latitude"
+            hint="Optional. With longitude it unlocks the forecast; without it weather falls back to offline climatology."
+          >
+            {(id) => (
+              <TextInput
+                id={id}
+                type="number"
+                step="0.01"
+                min="-90"
+                max="90"
+                value={form.latitude}
+                placeholder="16.99"
+                onChange={(event) => setForm({ ...form, latitude: event.target.value })}
+              />
+            )}
+          </FieldRow>
+          <FieldRow label="Longitude" hint="Optional. Both coordinates must be set together.">
+            {(id) => (
+              <TextInput
+                id={id}
+                type="number"
+                step="0.01"
+                min="-180"
+                max="180"
+                value={form.longitude}
+                placeholder="82.25"
+                onChange={(event) => setForm({ ...form, longitude: event.target.value })}
               />
             )}
           </FieldRow>

@@ -22,8 +22,22 @@ import { FieldGate } from '../components/layout/FieldGate';
 import { DailyWeatherChart } from '../components/charts/DailyWeatherChart';
 import { useFieldWeather, useFieldWeatherEvidence } from '../hooks/useWeather';
 import { useSelection } from '../context/SelectionContext';
+import { ApiError } from '../api/client';
 import type { Evidence, WeatherBundle, WeatherDay } from '../api/types';
 import { formatDateTime, formatNumber, formatShortDate } from '../lib/format';
+
+/**
+ * The backend rejects a forecast for a field with no coordinates with 422 and
+ * an explanatory message. That is a missing-input state, not a failure, so it
+ * gets an actionable empty state instead of a red error banner.
+ */
+function isMissingGeolocation(error: unknown): boolean {
+  return (
+    error instanceof ApiError &&
+    error.status === 422 &&
+    /no geolocation/i.test(error.message)
+  );
+}
 
 /**
  * Weather.
@@ -86,11 +100,19 @@ export function WeatherPage() {
             </Card>
           </div>
         ) : weather.error ? (
-          <ErrorBanner
-            title="Could not load the forecast"
-            error={weather.error}
-            onRetry={() => void weather.refetch()}
-          />
+          isMissingGeolocation(weather.error) ? (
+            <EmptyState
+              title="This field has no coordinates"
+              description="Weather cannot be requested without a latitude and longitude. Open the field's edit page and set both, or add them to the farm so every field inherits them. Until then the agents fall back to offline climatology."
+              icon={<CloudRain className="h-5 w-5" aria-hidden="true" />}
+            />
+          ) : (
+            <ErrorBanner
+              title="Could not load the forecast"
+              error={weather.error}
+              onRetry={() => void weather.refetch()}
+            />
+          )
         ) : !weather.data ? (
           <EmptyState
             title="No forecast available"

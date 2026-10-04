@@ -581,7 +581,7 @@ function AddObservationForm({ fieldId, onDone }: { fieldId: number; onDone: () =
     electrical_conductivity_ds_m: '',
     sample_depth_cm: '15',
     soil_type: '',
-    data_source: 'field_measurement',
+    data_source: 'manual_entry',
     lab_name: '',
     notes: '',
   });
@@ -731,12 +731,17 @@ function AddObservationForm({ fieldId, onDone }: { fieldId: number; onDone: () =
           <FieldRow label="Soil type recorded">
             {(id) => <TextInput id={id} value={form.soil_type} onChange={set('soil_type')} />}
           </FieldRow>
-          <FieldRow label="Data source" required hint="Where the measurement came from, e.g. lab name or 'field_measurement'.">
+          <FieldRow
+            label="Data source"
+            required
+            hint="Where the measurement came from. These values are the backend's accepted provenance codes."
+          >
             {(id) => (
               <Select id={id} value={form.data_source} onChange={set('data_source')}>
-                <option value="field_measurement">Field measurement</option>
-                <option value="soil_test_card">Soil health card</option>
-                <option value="laboratory">Laboratory report</option>
+                <option value="lab_test">Laboratory report</option>
+                <option value="manual_entry">Field measurement</option>
+                <option value="sensor">Sensor reading</option>
+                <option value="demo_seed">Demo seed data</option>
               </Select>
             )}
           </FieldRow>

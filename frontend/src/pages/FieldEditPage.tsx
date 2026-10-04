@@ -47,6 +47,9 @@ export function FieldEditPage() {
         data.water_availability_m3_per_day !== null && data.water_availability_m3_per_day !== undefined
           ? String(data.water_availability_m3_per_day)
           : '',
+      latitude: data.latitude !== null && data.latitude !== undefined ? String(data.latitude) : '',
+      longitude:
+        data.longitude !== null && data.longitude !== undefined ? String(data.longitude) : '',
       notes: data.notes ?? '',
     });
     setLoadedFor(data.id);
@@ -68,6 +71,8 @@ export function FieldEditPage() {
       irrigation_source: form.irrigation_source.trim(),
       water_availability: form.water_availability.trim(),
       water_availability_m3_per_day: optionalNumber(form.water_availability_m3_per_day),
+      latitude: optionalNumber(form.latitude),
+      longitude: optionalNumber(form.longitude),
       notes: optionalString(form.notes),
     };
 
@@ -225,6 +230,37 @@ export function FieldEditPage() {
                   min="0"
                   value={form.water_availability_m3_per_day ?? ''}
                   onChange={set('water_availability_m3_per_day')}
+                />
+              )}
+            </FieldRow>
+            <FieldRow
+              label="Latitude"
+              hint="Optional. Setting both coordinates replaces offline climatology with a real forecast."
+            >
+              {(id) => (
+                <TextInput
+                  id={id}
+                  type="number"
+                  step="0.01"
+                  min="-90"
+                  max="90"
+                  value={form.latitude ?? ''}
+                  placeholder="16.99"
+                  onChange={set('latitude')}
+                />
+              )}
+            </FieldRow>
+            <FieldRow label="Longitude" hint="Optional. Both coordinates must be set together.">
+              {(id) => (
+                <TextInput
+                  id={id}
+                  type="number"
+                  step="0.01"
+                  min="-180"
+                  max="180"
+                  value={form.longitude ?? ''}
+                  placeholder="82.25"
+                  onChange={set('longitude')}
                 />
               )}
             </FieldRow>
