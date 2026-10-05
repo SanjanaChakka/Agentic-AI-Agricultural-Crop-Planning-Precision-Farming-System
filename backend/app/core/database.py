@@ -40,7 +40,7 @@ def _engine_kwargs(database_url: str) -> dict[str, Any]:
     return kwargs
 
 
-engine: Engine = create_engine(settings.database_url, **_engine_kwargs(settings.database_url))
+engine: Engine = create_engine(settings.sqlalchemy_url, **_engine_kwargs(settings.database_url))
 SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False, expire_on_commit=False, future=True)
 
 

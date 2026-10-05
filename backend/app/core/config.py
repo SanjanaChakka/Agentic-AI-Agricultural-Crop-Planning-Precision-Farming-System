@@ -150,6 +150,21 @@ class Settings(BaseSettings):
         return self.database_url.startswith("sqlite")
 
     @property
+    def sqlalchemy_url(self) -> str:
+        """``database_url`` rewritten to name a driver that is actually installed.
+
+        We depend on psycopg 3, but SQLAlchemy maps a bare ``postgresql://`` DSN
+        to the psycopg**2** dialect and then fails at import with
+        ``ModuleNotFoundError: No module named 'psycopg2'``. PaaS providers hand
+        out the bare form, so pin the driver here instead of requiring operators
+        to remember the ``+psycopg`` suffix. ``postgres://`` is also common.
+        """
+        url = self.database_url
+        if url.startswith(("postgresql://", "postgres://")):
+            return "postgresql+psycopg://" + url.split("://", 1)[1]
+        return url
+
+    @property
     def llm_configured(self) -> bool:
         return bool(self.llm_enabled and self.openai_api_key)
 
