@@ -412,6 +412,49 @@ Notes on the container setup:
 > `/api/v1/health/ready` with `{"database":true,"rag":true,"ml":true}` and the
 > frontend proxies `/api` through to it.
 
+### Split deployment: Render backend + Vercel frontend
+
+A PaaS deployment has **no reverse proxy**, so the browser talks to the backend
+host directly. That changes two settings, and getting either wrong looks like an
+application bug when it is a configuration one.
+
+Live deployment:
+
+| Piece | URL |
+|---|---|
+| Frontend (Vercel) | `https://agentic-ai-agricultural-crop-planni.vercel.app` |
+| Backend (Render) | `https://agri-backend-644q.onrender.com` |
+| Health check | `https://agri-backend-644q.onrender.com/api/v1/health` |
+
+**Vercel** — project settings, root directory `frontend`:
+
+```
+VITE_API_BASE_URL=https://agri-backend-644q.onrender.com/api/v1
+```
+
+**Render** — web service environment:
+
+```
+CORS_ORIGINS=https://agentic-ai-agricultural-crop-planni.vercel.app
+DATABASE_URL=postgresql://<user>:<pass>@<host>/<db>
+SEED_DEMO_DATA_ON_STARTUP=true
+ALLOW_OFFLINE_WEATHER_FALLBACK=true
+LLM_ENABLED=false
+```
+
+Three things that silently break this:
+
+- **The `/api/v1` suffix is required.** FastAPI mounts its routers under that
+  prefix, so omitting it sends every request to `/health`, `/fields`, … and each
+  returns `404`. The relative default `/api/v1` only works behind a proxy.
+- **The two origins must agree exactly** — scheme + host, no trailing slash and
+  no `/api` on the `CORS_ORIGINS` value. A mismatch turns 404s into CORS errors.
+- **`VITE_` variables are inlined at build time**, so changing one in the Vercel
+  dashboard requires a redeploy, not a restart.
+
+`render.yaml` in the repo root is an equivalent one-file alternative to the
+dashboard flow above; it is validated against Render's published Blueprint schema.
+
 ## Known limitations
 
 Stated plainly, because a system that hides its edges is harder to trust:
