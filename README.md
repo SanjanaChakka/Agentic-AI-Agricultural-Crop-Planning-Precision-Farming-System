@@ -161,7 +161,7 @@ happen after a review decision is recorded.
 
 Layering rule: `api/` depends on `services/`, never the reverse. Agents call
 services. Services never import FastAPI request objects, which is what makes the
-132-test suite fast and the logic reusable from scripts.
+145-test suite fast and the logic reusable from scripts.
 
 ## Safety contract
 
@@ -344,13 +344,30 @@ The recorder is deliberately strict: several checks were initially written as
 tautologies that could not fail. Those were rewritten so a genuine regression
 breaks the build.
 
-**Last recorded result: 6/6 cases passed, 145/145 individual checks passed**
-(`generated_at` 2026-10-04). The generated PDF is 8 pages, and TC-06 verifies the
+**Last recorded result: 6/6 cases passed, 147/147 individual checks passed**
+(`generated_at` 2026-10-05). The generated PDF is 8 pages, and TC-06 verifies the
 recorded `page_count` against what a PDF reader actually finds.
+
+### Mapping to the assignment's named scenarios
+
+The case IDs above are this project's own numbering, which does **not** line up
+one-to-one with the six scenarios in the brief. The table below is the honest
+mapping, so a reviewer can find the evidence for each requested scenario.
+
+| Brief scenario | Where it is verified |
+|---|---|
+| Suitable soil/weather → evidence-based suitability | TC-03, plus `tests/test_ph_suitability.py` |
+| Soil pH outside the configured crop range → limitation identified | `tests/test_ph_suitability.py` — asserts the factor is unfavourable, that `Soil pH` is named in `limiting_factors`, and that the weighted score drops rather than absorbing the outlier |
+| Low soil moisture → water-stress / irrigation review | TC-04, `tests/test_alerts_and_approvals.py` |
+| Significant rainfall forecast → irrigation adapts | `tests/test_irrigation_service.py` (rainfall substitutes for a proposed irrigation) |
+| Missing soil-test information → additional information requested | TC-01 plus `tests/test_soil_service.py::missing_parameters`; also surfaced as a `soil_testing` activity by the planner |
+| High humidity + disease-favourable conditions → environmental alert, not a diagnosis | TC-05, `tests/test_risk_model_finding.py` |
+
+The backend suite is **145 tests** in total; `ruff check` and `ruff format` are clean.
 
 ## API surface
 
-69 paths under `/api/v1` (82 HTTP operations counting method variants). The
+71 paths under `/api/v1` (83 HTTP operations counting method variants). The
 groups:
 
 `activities` · `agents` · `alerts` · `approvals` · `dashboard` · `farms` ·

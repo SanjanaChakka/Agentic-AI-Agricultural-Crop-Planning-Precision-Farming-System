@@ -1,6 +1,6 @@
 # Acceptance test record (TC-01 .. TC-06)
 
-Generated: 2026-10-05T16:29:54+00:00
+Generated: 2026-10-05T16:42:32+00:00
 
 **Cases:** 6/6 passed &nbsp;|&nbsp; **Checks:** 147/147 passed
 
@@ -44,8 +44,8 @@ Generated: 2026-10-05T16:29:54+00:00
     "water_availability": "moderate",
     "water_availability_m3_per_day": 180.0,
     "notes": "Vertisol with high clay content; irrigate only on measured depletion.",
-    "created_at": "2026-10-05T16:28:53.530866Z",
-    "updated_at": "2026-10-05T16:28:53.530878Z"
+    "created_at": "2026-10-05T16:41:38.730548Z",
+    "updated_at": "2026-10-05T16:41:38.730558Z"
   },
   "soil_response_status": 200,
   "soil_observation_id": 6,
@@ -114,7 +114,7 @@ Generated: 2026-10-05T16:29:54+00:00
 - [x] Measured 'nitrogen_available_kg_ha' is preserved verbatim -> `detail=137.5 re-read=137.5 list=137.5`
 - [x] Measured 'phosphorus_available_kg_ha' is preserved verbatim -> `detail=None re-read=None list=None`
 - [x] Measured 'potassium_available_kg_ha' is preserved verbatim -> `detail=244.0 re-read=244.0 list=244.0`
-- [x] Submitting a lab observation returns 201 -> `HTTP 201 {"observation":{"id":7,"field_id":1,"observed_at":"2026-10-05T16:29:24.942760Z","sample_depth_cm":20.0,"soil_type":"sandy_loam","ph":8.4,"nitrogen_available_kg_ha":137.5,"phosphorus_available_kg_ha":n`
+- [x] Submitting a lab observation returns 201 -> `HTTP 201 {"observation":{"id":7,"field_id":1,"observed_at":"2026-10-05T16:42:08.843987Z","sample_depth_cm":20.0,"soil_type":"sandy_loam","ph":8.4,"nitrogen_available_kg_ha":137.5,"phosphorus_available_kg_ha":n`
 - [x] AI interpretation of the submitted sample -> `Measured pH is 8.4 (moderately alkaline (pH 7.5-8.5)). Medium: Available nitrogen (kg/ha), Available potassium K2O (kg/ha). Moderately alkaline soil. Iron, zinc and manganese availability falls; watch for micronutrient deficiency symptoms and avoid further liming. 5 parameter(s) are missing, so this interpretation is partial.`
 - [x] AI rating class for the submitted pH -> `moderately_alkaline`
 - [x] Submitted measured 'ph' returned unmodified -> `submitted=8.4 returned=8.4`
@@ -332,7 +332,7 @@ Generated: 2026-10-05T16:29:54+00:00
 - Approval reviewer: (unassigned)
 - Approval status after decision: approved
 - Reviewer recorded: Priya Raghavan (Agronomist)
-- Decision timestamp: 2026-10-05T16:29:40.278618Z
+- Decision timestamp: 2026-10-05T16:42:21.758476Z
 - Irrigation activity after approval: [scheduled, Priya Raghavan (Agronomist)]
 - Run status after approval: completed
 
@@ -372,7 +372,7 @@ Generated: 2026-10-05T16:29:54+00:00
 - [x] Approval decision accepted -> `HTTP 200 {"id":3,"workflow_run_id":3,"field_id":1,"title":"Authorise irrigation of 35.1 mm on field 1 for cotton","action_type":"irrigation_plan","recommendation":{"action_type":"irrigation","field_id":1,"crop`
 - [x] Approval status after decision -> `approved`
 - [x] Reviewer recorded -> `Priya Raghavan (Agronomist)`
-- [x] Decision timestamp -> `2026-10-05T16:29:40.278618Z`
+- [x] Decision timestamp -> `2026-10-05T16:42:21.758476Z`
 - [x] Irrigation activity after approval -> `[scheduled, Priya Raghavan (Agronomist)]`
 - [x] Approval schedules the irrigation activity (planned -> scheduled) -> `status=scheduled`
 - [x] Accountable person is recorded on the scheduled activity -> `responsible_person=Priya Raghavan (Agronomist)`
@@ -481,32 +481,32 @@ Generated: 2026-10-05T16:29:54+00:00
     {
       "agent": "farm_field_profile_agent",
       "status": "succeeded",
-      "ms": 23.26
+      "ms": 32.53
     },
     {
       "agent": "soil_nutrient_agent",
       "status": "succeeded",
-      "ms": 3.92
+      "ms": 3.47
     },
     {
       "agent": "weather_climate_agent",
       "status": "succeeded",
-      "ms": 3531.63
+      "ms": 2309.49
     },
     {
       "agent": "crop_suitability_agent",
       "status": "succeeded",
-      "ms": 86.72
+      "ms": 140.74
     },
     {
       "agent": "irrigation_agent",
       "status": "succeeded",
-      "ms": 241.25
+      "ms": 250.07
     },
     {
       "agent": "crop_risk_advisory_agent",
       "status": "succeeded",
-      "ms": 38.97
+      "ms": 57.69
     }
   ],
   "report_id": 2
@@ -531,7 +531,7 @@ Generated: 2026-10-05T16:29:54+00:00
 - Activities planned: [field_scouting:planned, irrigation:planned, soil_testing:planned]
 - Citations in summary: [soil.texture_and_water_holding, crops.rice, crops.cotton, soil.soil_ph_and_fertility, crops.tomato, irrigation.water_requirements_by_stage, irrigation.scheduling_principles, risk.disease_favourable_environment]
 - Report status: ready
-- Report file name: RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf
+- Report file name: RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf
 - Report size (bytes): 26703
 - Report pages: 8
 - Sections: [1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)
@@ -595,9 +595,9 @@ Generated: 2026-10-05T16:29:54+00:00
 - [x] Citations are de-duplicated by document -> `8 unique of 8`
 - [x] The activity planner produced dated activities -> `3 activities`
 - [x] Alerts are de-duplicated by fingerprint -> `2 unique of 2`
-- [x] Report generation accepted -> `HTTP 201 {"id":2,"farm_id":1,"field_id":1,"workflow_run_id":4,"title":"Precision farming report - North Black Cotton Plot (cotton)","status":"ready","file_name":"RKF-01-North-Black-Cotton-Plot-20261005T162952Z`
+- [x] Report generation accepted -> `HTTP 201 {"id":2,"farm_id":1,"field_id":1,"workflow_run_id":4,"title":"Precision farming report - North Black Cotton Plot (cotton)","status":"ready","file_name":"RKF-01-North-Black-Cotton-Plot-20261005T164230Z`
 - [x] Report status -> `ready`
-- [x] Report file name -> `RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf`
+- [x] Report file name -> `RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf`
 - [x] Report size (bytes) -> `26703`
 - [x] Report pages -> `8`
 - [x] Sections -> `[1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)`
@@ -607,7 +607,7 @@ Generated: 2026-10-05T16:29:54+00:00
 - [x] PDF downloads over HTTP -> `HTTP 200`
 - [x] Download is a real PDF (magic header) -> `b'%PDF-1.4'`
 - [x] PDF is not an empty stub -> `26703 bytes`
-- [x] PDF exists on disk -> `D:\pip-temp\agri-pytest-8zv_77mq\reports\RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf`
+- [x] PDF exists on disk -> `D:\pip-temp\agri-pytest-g132qzuk\reports\RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf`
 - [x] File on disk matches the downloaded bytes -> `b'%PDF-1.4'`
 - [x] PDF page count matches the recorded metadata -> `reader=8 recorded=8`
 - [x] PDF characters extracted -> `18203`

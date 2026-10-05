@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-05T16:29:54+00:00",
+  "generated_at": "2026-10-05T16:42:32+00:00",
   "total_cases": 6,
   "passed": 6,
   "failed": 0,
@@ -37,8 +37,8 @@
           "water_availability": "moderate",
           "water_availability_m3_per_day": 180.0,
           "notes": "Vertisol with high clay content; irrigate only on measured depletion.",
-          "created_at": "2026-10-05T16:28:53.530866Z",
-          "updated_at": "2026-10-05T16:28:53.530878Z"
+          "created_at": "2026-10-05T16:41:38.730548Z",
+          "updated_at": "2026-10-05T16:41:38.730558Z"
         },
         "soil_response_status": 200,
         "soil_observation_id": 6,
@@ -198,7 +198,7 @@
         {
           "check": "Submitting a lab observation returns 201",
           "passed": true,
-          "detail": "HTTP 201 {\"observation\":{\"id\":7,\"field_id\":1,\"observed_at\":\"2026-10-05T16:29:24.942760Z\",\"sample_depth_cm\":20.0,\"soil_type\":\"sandy_loam\",\"ph\":8.4,\"nitrogen_available_kg_ha\":137.5,\"phosphorus_available_kg_ha\":n"
+          "detail": "HTTP 201 {\"observation\":{\"id\":7,\"field_id\":1,\"observed_at\":\"2026-10-05T16:42:08.843987Z\",\"sample_depth_cm\":20.0,\"soil_type\":\"sandy_loam\",\"ph\":8.4,\"nitrogen_available_kg_ha\":137.5,\"phosphorus_available_kg_ha\":n"
         },
         {
           "check": "AI interpretation of the submitted sample",
@@ -598,7 +598,7 @@
         "Approval reviewer: (unassigned)",
         "Approval status after decision: approved",
         "Reviewer recorded: Priya Raghavan (Agronomist)",
-        "Decision timestamp: 2026-10-05T16:29:40.278618Z",
+        "Decision timestamp: 2026-10-05T16:42:21.758476Z",
         "Irrigation activity after approval: [scheduled, Priya Raghavan (Agronomist)]",
         "Run status after approval: completed"
       ],
@@ -750,7 +750,7 @@
         {
           "check": "Decision timestamp",
           "passed": true,
-          "detail": "2026-10-05T16:29:40.278618Z"
+          "detail": "2026-10-05T16:42:21.758476Z"
         },
         {
           "check": "Irrigation activity after approval",
@@ -978,32 +978,32 @@
           {
             "agent": "farm_field_profile_agent",
             "status": "succeeded",
-            "ms": 23.26
+            "ms": 32.53
           },
           {
             "agent": "soil_nutrient_agent",
             "status": "succeeded",
-            "ms": 3.92
+            "ms": 3.47
           },
           {
             "agent": "weather_climate_agent",
             "status": "succeeded",
-            "ms": 3531.63
+            "ms": 2309.49
           },
           {
             "agent": "crop_suitability_agent",
             "status": "succeeded",
-            "ms": 86.72
+            "ms": 140.74
           },
           {
             "agent": "irrigation_agent",
             "status": "succeeded",
-            "ms": 241.25
+            "ms": 250.07
           },
           {
             "agent": "crop_risk_advisory_agent",
             "status": "succeeded",
-            "ms": 38.97
+            "ms": 57.69
           }
         ],
         "report_id": 2
@@ -1026,7 +1026,7 @@
         "Activities planned: [field_scouting:planned, irrigation:planned, soil_testing:planned]",
         "Citations in summary: [soil.texture_and_water_holding, crops.rice, crops.cotton, soil.soil_ph_and_fertility, crops.tomato, irrigation.water_requirements_by_stage, irrigation.scheduling_principles, risk.disease_favourable_environment]",
         "Report status: ready",
-        "Report file name: RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf",
+        "Report file name: RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf",
         "Report size (bytes): 26703",
         "Report pages: 8",
         "Sections: [1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)",
@@ -1298,7 +1298,7 @@
         {
           "check": "Report generation accepted",
           "passed": true,
-          "detail": "HTTP 201 {\"id\":2,\"farm_id\":1,\"field_id\":1,\"workflow_run_id\":4,\"title\":\"Precision farming report - North Black Cotton Plot (cotton)\",\"status\":\"ready\",\"file_name\":\"RKF-01-North-Black-Cotton-Plot-20261005T162952Z"
+          "detail": "HTTP 201 {\"id\":2,\"farm_id\":1,\"field_id\":1,\"workflow_run_id\":4,\"title\":\"Precision farming report - North Black Cotton Plot (cotton)\",\"status\":\"ready\",\"file_name\":\"RKF-01-North-Black-Cotton-Plot-20261005T164230Z"
         },
         {
           "check": "Report status",
@@ -1308,7 +1308,7 @@
         {
           "check": "Report file name",
           "passed": true,
-          "detail": "RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf"
+          "detail": "RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf"
         },
         {
           "check": "Report size (bytes)",
@@ -1358,7 +1358,7 @@
         {
           "check": "PDF exists on disk",
           "passed": true,
-          "detail": "D:\\pip-temp\\agri-pytest-8zv_77mq\\reports\\RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf"
+          "detail": "D:\\pip-temp\\agri-pytest-g132qzuk\\reports\\RKF-01-North-Black-Cotton-Plot-20261005T164230Z-a3761e.pdf"
         },
         {
           "check": "File on disk matches the downloaded bytes",
