@@ -1,0 +1,4 @@
+-r requirements.txt
+
+# Extra tooling used only while developing, not required at runtime.
+pypdf==6.19.0

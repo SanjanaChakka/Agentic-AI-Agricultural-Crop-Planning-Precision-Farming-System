@@ -1,0 +1,78 @@
+# ---------------------------------------------------------------------------
+# Secrets - never commit these.  `.env.example` holds the placeholders.
+# ---------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---------------------------------------------------------------------------
+# Python
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# ---------------------------------------------------------------------------
+# Runtime data (regenerated on first boot)
+# ---------------------------------------------------------------------------
+backend/agri.db
+backend/agri.db-journal
+backend/*.log
+backend/server.pid
+backend/reports/
+backend/data/exports/
+
+# ---------------------------------------------------------------------------
+# Frontend
+# ---------------------------------------------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/coverage/
+frontend/playwright-report/
+frontend/test-results/
+frontend/*.tsbuildinfo
+frontend/.env
+frontend/.env.local
+
+# ---------------------------------------------------------------------------
+# ML / RAG artifacts
+#
+# The two trained models are committed on purpose (see `git ls-files
+# backend/app/ml/artifacts`): without them a fresh clone boots with `ml: down`,
+# the acceptance suite fails, and the ML agents cannot run. They are ~9 MB
+# total, which is acceptable for a self-contained deliverable. Retrain with
+# `python app/ml/train.py`.
+#
+# The RAG index stays ignored - it is rebuilt on first boot from the committed
+# corpus, so there is nothing to carry.
+# ---------------------------------------------------------------------------
+backend/app/ml/artifacts/*.pkl
+backend/app/ml/rag_index/
+backend/app/rag/index/
+backend/knowledge_index/
+
+# ---------------------------------------------------------------------------
+# Editors / OS
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

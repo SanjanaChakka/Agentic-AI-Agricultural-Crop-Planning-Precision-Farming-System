@@ -1,0 +1,73 @@
+# Agentic AI Agricultural Crop Planning & Precision Farming System
+#
+#   cp .env.example .env && docker compose up --build
+#
+# The UI is then on http://localhost:8080 and proxies /api to the backend, so
+# the browser only ever talks to one origin and no CORS setup is required.
+
+services:
+  db:
+    image: postgres:16-alpine
+    profiles: ["postgres"]
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-agri_user}
+      # No `:?` guard here on purpose. A hard requirement would make *every*
+      # compose command - including `ps` and `logs` for the default SQLite
+      # stack - fail for a variable only this optional profile needs. Postgres
+      # itself refuses to start with an empty password, which is the right place
+      # for that error to surface.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-}
+      POSTGRES_DB: ${POSTGRES_DB:-agri}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-agri_user} -d ${POSTGRES_DB:-agri}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    environment:
+      ENVIRONMENT: production
+      DEBUG: "false"
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+# Defaults to SQLite on the mounted volume so the database survives a
+      # container replacement. To use the `postgres` profile:
+      #   docker compose --profile postgres up --build
+      # and set DATABASE_URL=postgresql+psycopg://agri_user:...@db:5432/agri
+      DATABASE_URL: ${DATABASE_URL:-sqlite:////data/agri.db}
+      REPORTS_DIR: /data/reports
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:8080}
+      SEED_DEMO_DATA_ON_STARTUP: ${SEED_DEMO_DATA_ON_STARTUP:-false}
+      ALLOW_OFFLINE_WEATHER_FALLBACK: ${ALLOW_OFFLINE_WEATHER_FALLBACK:-true}
+      WEATHER_API_KEY: ${WEATHER_API_KEY:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      LLM_ENABLED: ${LLM_ENABLED:-true}
+      RAG_REBUILD_ON_STARTUP: ${RAG_REBUILD_ON_STARTUP:-false}
+    volumes:
+      # Mounted at /data, NOT /app: a volume over /app would shadow the
+      # application code baked into the image.
+      - appdata:/data
+    ports:
+      - "${BACKEND_PORT:-8000}:8000"
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: .
+      dockerfile: frontend/Dockerfile
+      args:
+        VITE_API_BASE_URL: /api/v1
+    depends_on:
+      - backend
+    ports:
+      - "${FRONTEND_PORT:-8080}:80"
+    restart: unless-stopped
+
+volumes:
+  pgdata:
+  appdata:

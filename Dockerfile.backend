@@ -1,0 +1,77 @@
+# syntax=docker/dockerfile:1
+#
+# Backend image for the Agentic AI Agricultural Crop Planning system.
+#
+# Build from the repository root:
+#   docker build -f Dockerfile.backend -t agri-backend .
+#
+# The ML artefacts and the FAISS index are *not* committed (they are large,
+# regenerable binaries), so they are produced during the build. Training is
+# deterministic via ML_RANDOM_SEED, so the image is reproducible.
+#
+# To ship a slimmer image that trains on first boot instead, build with:
+#   docker build -f Dockerfile.backend --build-arg TRAIN_AT_BUILD=false .
+
+# ---------------------------------------------------------------------------
+# Stage 1 - build the regenerable artefacts
+# ---------------------------------------------------------------------------
+FROM python:3.13-slim AS builder
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /build
+
+# Dependency layer: cached until requirements change.
+COPY backend/requirements.txt backend/requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY backend/ ./
+
+# Pre-train the models and build the knowledge index so the runtime image is
+# self-contained and does no expensive work on first request.
+ARG TRAIN_AT_BUILD=true
+RUN if [ "$TRAIN_AT_BUILD" = "true" ]; then \
+        python -m app.ml.train && python -m app.rag.build; \
+    else \
+        echo "TRAIN_AT_BUILD=false - the container will train on first boot"; \
+    fi
+
+# ---------------------------------------------------------------------------
+# Stage 2 - runtime
+# ---------------------------------------------------------------------------
+FROM python:3.13-slim AS runtime
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    ENVIRONMENT=production \
+    DEBUG=false \
+    SEED_DEMO_DATA_ON_STARTUP=false \
+    ALLOW_OFFLINE_WEATHER_FALLBACK=true
+
+WORKDIR /app
+
+COPY backend/requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt \
+    && apt-get update \
+    && apt-get install --no-install-recommends --yes curl \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /build/app /app/app
+
+# Run unprivileged. The app writes only to /data (database + generated reports).
+RUN useradd --create-home --uid 10001 agri \
+    && mkdir -p /data/reports \
+    && chown -R agri:agri /app /data
+USER agri
+
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
+    CMD curl -fsS http://127.0.0.1:8000/api/v1/health/ready || exit 1
+
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
