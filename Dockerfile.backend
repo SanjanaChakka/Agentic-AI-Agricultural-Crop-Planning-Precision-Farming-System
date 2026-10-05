@@ -74,7 +74,14 @@ USER agri
 
 EXPOSE 8000
 
+# Probe the port the app is actually bound to, not a hardcoded 8000: with PORT
+# injected (Render, most PaaS) 8000 answers nothing and the container is marked
+# unhealthy even though it is serving correctly.
 HEALTHCHECK --interval=30s --timeout=5s --start-period=40s --retries=3 \
-    CMD curl -fsS http://127.0.0.1:8000/api/v1/health/ready || exit 1
+    CMD curl -fsS "http://127.0.0.1:${PORT:-8000}/api/v1/health/ready" || exit 1
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers"]
+# Honour $PORT. Render injects PORT (10000 on most plans) and routes traffic to
+# the port the service reports; hardcoding 8000 is a common reason a container
+# deploys fine locally and 502s on a PaaS. Locally PORT is unset, so this still
+# falls back to 8000.
+CMD ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000} --proxy-headers"]
