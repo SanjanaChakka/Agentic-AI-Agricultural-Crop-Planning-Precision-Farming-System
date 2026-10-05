@@ -1,6 +1,6 @@
 # Acceptance test record (TC-01 .. TC-06)
 
-Generated: 2026-10-05T09:52:39+00:00
+Generated: 2026-10-05T16:29:54+00:00
 
 **Cases:** 6/6 passed &nbsp;|&nbsp; **Checks:** 147/147 passed
 
@@ -44,8 +44,8 @@ Generated: 2026-10-05T09:52:39+00:00
     "water_availability": "moderate",
     "water_availability_m3_per_day": 180.0,
     "notes": "Vertisol with high clay content; irrigate only on measured depletion.",
-    "created_at": "2026-10-05T09:52:06.313510Z",
-    "updated_at": "2026-10-05T09:52:06.313514Z"
+    "created_at": "2026-10-05T16:28:53.530866Z",
+    "updated_at": "2026-10-05T16:28:53.530878Z"
   },
   "soil_response_status": 200,
   "soil_observation_id": 6,
@@ -114,7 +114,7 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] Measured 'nitrogen_available_kg_ha' is preserved verbatim -> `detail=137.5 re-read=137.5 list=137.5`
 - [x] Measured 'phosphorus_available_kg_ha' is preserved verbatim -> `detail=None re-read=None list=None`
 - [x] Measured 'potassium_available_kg_ha' is preserved verbatim -> `detail=244.0 re-read=244.0 list=244.0`
-- [x] Submitting a lab observation returns 201 -> `HTTP 201 {"observation":{"id":7,"field_id":1,"observed_at":"2026-10-05T09:52:25.239063Z","sample_depth_cm":20.0,"soil_type":"sandy_loam","ph":8.4,"nitrogen_available_kg_ha":137.5,"phosphorus_available_kg_ha":n`
+- [x] Submitting a lab observation returns 201 -> `HTTP 201 {"observation":{"id":7,"field_id":1,"observed_at":"2026-10-05T16:29:24.942760Z","sample_depth_cm":20.0,"soil_type":"sandy_loam","ph":8.4,"nitrogen_available_kg_ha":137.5,"phosphorus_available_kg_ha":n`
 - [x] AI interpretation of the submitted sample -> `Measured pH is 8.4 (moderately alkaline (pH 7.5-8.5)). Medium: Available nitrogen (kg/ha), Available potassium K2O (kg/ha). Moderately alkaline soil. Iron, zinc and manganese availability falls; watch for micronutrient deficiency symptoms and avoid further liming. 5 parameter(s) are missing, so this interpretation is partial.`
 - [x] AI rating class for the submitted pH -> `moderately_alkaline`
 - [x] Submitted measured 'ph' returned unmodified -> `submitted=8.4 returned=8.4`
@@ -163,7 +163,7 @@ Generated: 2026-10-05T09:52:39+00:00
 - is_simulated flag: False
 - fallback_used flag: False
 - Forecast days returned: 7
-- Total ET0 (mm): 43.71
+- Total ET0 (mm): 42.19
 - Notes: [Live data retrieved from the Open-Meteo public forecast API.]
 
 ### Agents invoked
@@ -178,7 +178,7 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] is_simulated flag -> `False`
 - [x] fallback_used flag -> `False`
 - [x] Forecast days returned -> `7`
-- [x] Total ET0 (mm) -> `43.71`
+- [x] Total ET0 (mm) -> `42.19`
 - [x] Notes -> `[Live data retrieved from the Open-Meteo public forecast API.]`
 - [x] Source is a known provider (open-meteo / openweathermap / offline-climatology) -> `open-meteo`
 - [x] Live provider is not flagged as simulated -> `is_simulated=False`
@@ -242,7 +242,7 @@ Generated: 2026-10-05T09:52:39+00:00
 | Label | Value | Unit | Provenance | Source |
 | --- | --- | --- | --- | --- |
 | Measured soil pH vs Cotton optimum | 8.4 |  | measured | lab_test |
-| Forecast mean temperature vs crop optimum | 29.59 | deg C | forecast | weather provider: Open-Meteo (live API) |
+| Forecast mean temperature vs crop optimum | 29.14 | deg C | forecast | weather provider: Open-Meteo (live API) |
 
 ### Checks
 
@@ -322,8 +322,8 @@ Generated: 2026-10-05T09:52:39+00:00
 - Urgency: high
 - requires_human_authorisation: True
 - authorisation_state before review: not_authorised
-- Estimated depth (mm): 34.8
-- Estimated volume (m3): 146.2
+- Estimated depth (mm): 35.1
+- Estimated volume (m3): 147.4
 - Rules evaluated: [moisture_below_critical, ml_soil_moisture_crosscheck, data_provenance]
 - Safety contract - approved: Authorises the recorded plan and moves its activities to 'scheduled'.
 - Safety contract - never: This system has no code path that actuates a valve, pump or any other physical equipment. Approval authorises documentation only.
@@ -332,7 +332,7 @@ Generated: 2026-10-05T09:52:39+00:00
 - Approval reviewer: (unassigned)
 - Approval status after decision: approved
 - Reviewer recorded: Priya Raghavan (Agronomist)
-- Decision timestamp: 2026-10-05T09:52:34.493594Z
+- Decision timestamp: 2026-10-05T16:29:40.278618Z
 - Irrigation activity after approval: [scheduled, Priya Raghavan (Agronomist)]
 - Run status after approval: completed
 
@@ -344,20 +344,20 @@ Generated: 2026-10-05T09:52:39+00:00
 
 | Label | Value | Unit | Provenance | Source |
 | --- | --- | --- | --- | --- |
-| Measured soil moisture | 19.1 | % VWC | simulated | sensor SM-01 |
-| Forecast rainfall (next 48 h) | 0.1 | mm | forecast | Open-Meteo (live API) |
-| Forecast reference evapotranspiration (7 day) | 43.71 | mm | forecast | Open-Meteo (live API) |
-| ML 7-day soil moisture forecast | 32.58 | % VWC | ml_prediction | RandomForestRegressor v1.0.0 |
+| Measured soil moisture | 18.97 | % VWC | simulated | sensor SM-01 |
+| Forecast rainfall (next 48 h) | 0.2 | mm | forecast | Open-Meteo (live API) |
+| Forecast reference evapotranspiration (7 day) | 42.19 | mm | forecast | Open-Meteo (live API) |
+| ML 7-day soil moisture forecast | 31.95 | % VWC | ml_prediction | RandomForestRegressor v1.0.0 |
 
 ### Checks
 
-- [x] Irrigation assessment returns 201 -> `HTTP 201 {"id":2,"field_id":1,"workflow_run_id":null,"recommendation":"consider_irrigation","urgency":"high","requires_human_authorisation":true,"authorisation_state":"not_authorised","estimated_water_mm":34.8`
+- [x] Irrigation assessment returns 201 -> `HTTP 201 {"id":2,"field_id":1,"workflow_run_id":null,"recommendation":"consider_irrigation","urgency":"high","requires_human_authorisation":true,"authorisation_state":"not_authorised","estimated_water_mm":35.1`
 - [x] Recommendation -> `consider_irrigation`
 - [x] Urgency -> `high`
 - [x] requires_human_authorisation -> `True`
 - [x] authorisation_state before review -> `not_authorised`
-- [x] Estimated depth (mm) -> `34.8`
-- [x] Estimated volume (m3) -> `146.2`
+- [x] Estimated depth (mm) -> `35.1`
+- [x] Estimated volume (m3) -> `147.4`
 - [x] Rules evaluated -> `[moisture_below_critical, ml_soil_moisture_crosscheck, data_provenance]`
 - [x] Irrigation advice is explicitly unauthorised -> `True/not_authorised`
 - [x] Safety contract - approved -> `Authorises the recorded plan and moves its activities to 'scheduled'.`
@@ -369,10 +369,10 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] Run halts at awaiting_human_review -> `awaiting_human_review`
 - [x] A pending approval request was raised -> `approval=3 status=pending`
 - [x] No irrigation activity is scheduled before approval -> `irrigation activity status = planned`
-- [x] Approval decision accepted -> `HTTP 200 {"id":3,"workflow_run_id":3,"field_id":1,"title":"Authorise irrigation of 34.8 mm on field 1 for cotton","action_type":"irrigation_plan","recommendation":{"action_type":"irrigation","field_id":1,"crop`
+- [x] Approval decision accepted -> `HTTP 200 {"id":3,"workflow_run_id":3,"field_id":1,"title":"Authorise irrigation of 35.1 mm on field 1 for cotton","action_type":"irrigation_plan","recommendation":{"action_type":"irrigation","field_id":1,"crop`
 - [x] Approval status after decision -> `approved`
 - [x] Reviewer recorded -> `Priya Raghavan (Agronomist)`
-- [x] Decision timestamp -> `2026-10-05T09:52:34.493594Z`
+- [x] Decision timestamp -> `2026-10-05T16:29:40.278618Z`
 - [x] Irrigation activity after approval -> `[scheduled, Priya Raghavan (Agronomist)]`
 - [x] Approval schedules the irrigation activity (planned -> scheduled) -> `status=scheduled`
 - [x] Accountable person is recorded on the scheduled activity -> `responsible_person=Priya Raghavan (Agronomist)`
@@ -395,8 +395,8 @@ Generated: 2026-10-05T09:52:39+00:00
   "finding_count": 1,
   "ml_risk_prediction": {
     "model_name": "RandomForestClassifier",
-    "prediction_label": "moderate",
-    "confidence": 0.5526
+    "prediction_label": "high",
+    "confidence": 0.6503
   }
 }
 ```
@@ -412,11 +412,11 @@ Generated: 2026-10-05T09:52:39+00:00
 ### Actual
 - Overall risk level: moderate
 - Disclaimer: These findings describe environmental conditions only. The system has no diagnostic capability: no disease, pest or nutrient disorder is diagnosed here. Confirm anything through field scouting and, where necessary, laboratory testing.
-- Finding statements: [Environmental conditions favourable for water stress: measured soil moisture 19.1% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]
+- Finding statements: [Environmental conditions favourable for water stress: measured soil moisture 18.97% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]
 - Severities: [water_stress=medium]
 - ML model: RandomForestClassifier
-- ML predicted severity: moderate
-- ML confidence: 0.5526
+- ML predicted severity: high
+- ML confidence: 0.6503
 - ML features actually fed to the model: [crop_stage_index, et0_7d_mm, heat_margin_c, heavy_rain_margin_mm, humidity_margin_percent, humidity_mean_percent]
 - Rule-based worst severity: [medium]
 
@@ -435,15 +435,15 @@ Generated: 2026-10-05T09:52:39+00:00
 
 | Label | Value | Unit | Provenance | Source |
 | --- | --- | --- | --- | --- |
-| Measured soil moisture | 19.1 | % VWC | simulated | sensor SM-01 |
-| Moisture change over monitoring window | -4.05 | %VWC | observed |  |
+| Measured soil moisture | 18.97 | % VWC | simulated | sensor SM-01 |
+| Moisture change over monitoring window | -4.03 | %VWC | observed |  |
 
 ### Checks
 
 - [x] Risk scan returns 200 -> `HTTP 200`
 - [x] Overall risk level -> `moderate`
 - [x] Disclaimer -> `These findings describe environmental conditions only. The system has no diagnostic capability: no disease, pest or nutrient disorder is diagnosed here. Confirm anything through field scouting and, where necessary, laboratory testing.`
-- [x] Finding statements -> `[Environmental conditions favourable for water stress: measured soil moisture 19.1% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]`
+- [x] Finding statements -> `[Environmental conditions favourable for water stress: measured soil moisture 18.97% VWC is at or below the critical threshold of 30.0% VWC for Cotton.]`
 - [x] Severities -> `[water_stress=medium]`
 - [x] Every finding uses 'Environmental conditions favourable for ...' -> `1/1`
 - [x] No confirmation / diagnosis language anywhere in the findings -> `none found`
@@ -451,15 +451,15 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] Disclaimer endpoint publishes the wording rule -> `Findings must be phrased as 'Environmental conditions favourable for X'. The system never states that a disease is confi`
 - [x] Every finding tells the reader what to check next -> `1/1`
 - [x] Disease-environment findings route to scouting plus lab/plant-clinic confirmation -> `0 disease-environment finding(s)`
-- [x] ML scoring endpoint runs with no request body -> `HTTP 201 [{"id":9,"field_id":1,"workflow_run_id":null,"model_name":"RandomForestRegressor","model_version":"1.0.0","task":"soil_moisture_forecast","status":"ok","prediction_value":32.58,"prediction_label":null`
+- [x] ML scoring endpoint runs with no request body -> `HTTP 201 [{"id":9,"field_id":1,"workflow_run_id":null,"model_name":"RandomForestRegressor","model_version":"1.0.0","task":"soil_moisture_forecast","status":"ok","prediction_value":31.95,"prediction_label":null`
 - [x] Both trained models answered -> `['soil_moisture_forecast', 'environmental_risk_classification']`
 - [x] ML model -> `RandomForestClassifier`
-- [x] ML predicted severity -> `moderate`
-- [x] ML confidence -> `0.5526`
+- [x] ML predicted severity -> `high`
+- [x] ML confidence -> `0.6503`
 - [x] ML prediction is attributed to the trained model, not invented -> `target=environmental_risk_severity_bucket (none/low/moderate/high)`
 - [x] ML features actually fed to the model -> `[crop_stage_index, et0_7d_mm, heat_margin_c, heavy_rain_margin_mm, humidity_margin_percent, humidity_mean_percent]`
 - [x] Rule-based worst severity -> `[medium]`
-- [x] ML severity agrees with the rule-based scan within one band -> `rules=2 ml=1`
+- [x] ML severity agrees with the rule-based scan within one band -> `rules=2 ml=3`
 
 > Risk statements describe the environment only. Confirming a disease needs field scouting or a laboratory test, which is exactly what recommended_investigation tells the reader to do.
 
@@ -481,32 +481,32 @@ Generated: 2026-10-05T09:52:39+00:00
     {
       "agent": "farm_field_profile_agent",
       "status": "succeeded",
-      "ms": 10.22
+      "ms": 23.26
     },
     {
       "agent": "soil_nutrient_agent",
       "status": "succeeded",
-      "ms": 1.94
+      "ms": 3.92
     },
     {
       "agent": "weather_climate_agent",
       "status": "succeeded",
-      "ms": 1263.84
+      "ms": 3531.63
     },
     {
       "agent": "crop_suitability_agent",
       "status": "succeeded",
-      "ms": 58.73
+      "ms": 86.72
     },
     {
       "agent": "irrigation_agent",
       "status": "succeeded",
-      "ms": 112.91
+      "ms": 241.25
     },
     {
       "agent": "crop_risk_advisory_agent",
       "status": "succeeded",
-      "ms": 13.7
+      "ms": 38.97
     }
   ],
   "report_id": 2
@@ -531,12 +531,12 @@ Generated: 2026-10-05T09:52:39+00:00
 - Activities planned: [field_scouting:planned, irrigation:planned, soil_testing:planned]
 - Citations in summary: [soil.texture_and_water_holding, crops.rice, crops.cotton, soil.soil_ph_and_fertility, crops.tomato, irrigation.water_requirements_by_stage, irrigation.scheduling_principles, risk.disease_favourable_environment]
 - Report status: ready
-- Report file name: RKF-01-North-Black-Cotton-Plot-20261005T095239Z-a3761e.pdf
-- Report size (bytes): 26478
+- Report file name: RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf
+- Report size (bytes): 26703
 - Report pages: 8
 - Sections: [1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)
 - Download URL: /api/v1/reports/2/download
-- PDF characters extracted: 17378
+- PDF characters extracted: 18203
 
 ### Agents invoked
 
@@ -565,9 +565,9 @@ Generated: 2026-10-05T09:52:39+00:00
 | Refill trigger for declared texture | 26.0 | % VWC | retrieved_reference | soil texture reference table |
 | Irrigation source | borewell |  | user_input | field record |
 | Water availability | moderate |  | user_input | field record |
-| Sensor soil moisture (simulated) | 19.1 | % VWC | simulated | sensor SM-01 |
-| Sensor soil temperature (simulated) | 24.35 | deg C | simulated | sensor SM-01 |
-| Sensor air humidity (simulated) | 74.09 | % | simulated | sensor SM-01 |
+| Sensor soil moisture (simulated) | 18.97 | % VWC | simulated | sensor SM-01 |
+| Sensor soil temperature (simulated) | 29.33 | deg C | simulated | sensor SM-01 |
+| Sensor air humidity (simulated) | 63.54 | % | simulated | sensor SM-01 |
 | Sensor quality flags | simulated |  | observed | sensor SM-01 |
 | Measured soil pH | 8.4 |  | measured | lab_test |
 | Measured available nitrogen | 137.5 |  | measured | lab_test |
@@ -590,15 +590,15 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] Every composite agent recorded its folded-in sub-steps -> `5 composites, 5 traced`
 - [x] Run warnings, if any, are explained -> `6 warning(s)`
 - [x] Citations from FAISS retrieval reach the run summary -> `8 citation(s)`
-- [x] Evidence ledger from every agent is merged (not overwritten) -> `29 evidence row(s)`
+- [x] Evidence ledger from every agent is merged (not overwritten) -> `30 evidence row(s)`
 - [x] Evidence rows carry provenance tags -> `kinds=['deterministic_narrative', 'forecast', 'measured', 'ml_prediction', 'observed', 'retrieved_reference', 'simulated', 'user_input']`
 - [x] Citations are de-duplicated by document -> `8 unique of 8`
 - [x] The activity planner produced dated activities -> `3 activities`
 - [x] Alerts are de-duplicated by fingerprint -> `2 unique of 2`
-- [x] Report generation accepted -> `HTTP 201 {"id":2,"farm_id":1,"field_id":1,"workflow_run_id":4,"title":"Precision farming report - North Black Cotton Plot (cotton)","status":"ready","file_name":"RKF-01-North-Black-Cotton-Plot-20261005T095239Z`
+- [x] Report generation accepted -> `HTTP 201 {"id":2,"farm_id":1,"field_id":1,"workflow_run_id":4,"title":"Precision farming report - North Black Cotton Plot (cotton)","status":"ready","file_name":"RKF-01-North-Black-Cotton-Plot-20261005T162952Z`
 - [x] Report status -> `ready`
-- [x] Report file name -> `RKF-01-North-Black-Cotton-Plot-20261005T095239Z-a3761e.pdf`
-- [x] Report size (bytes) -> `26478`
+- [x] Report file name -> `RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf`
+- [x] Report size (bytes) -> `26703`
 - [x] Report pages -> `8`
 - [x] Sections -> `[1. Executive summary, 2. Soil and nutrient analysis, 3. Weather and climate context, 4. Crop suitability assessment, 5. Irrigation assessment, 6. Environmental risk findings (favourability, not diagnosis), 7. Machine-learning models, 8. Activity plan, alerts and approval] (+1 more)`
 - [x] Download URL -> `/api/v1/reports/2/download`
@@ -606,11 +606,11 @@ Generated: 2026-10-05T09:52:39+00:00
 - [x] download_url is a real route -> `/api/v1/reports/2/download`
 - [x] PDF downloads over HTTP -> `HTTP 200`
 - [x] Download is a real PDF (magic header) -> `b'%PDF-1.4'`
-- [x] PDF is not an empty stub -> `26478 bytes`
-- [x] PDF exists on disk -> `D:\pip-temp\agri-pytest-nzmz5hpb\reports\RKF-01-North-Black-Cotton-Plot-20261005T095239Z-a3761e.pdf`
+- [x] PDF is not an empty stub -> `26703 bytes`
+- [x] PDF exists on disk -> `D:\pip-temp\agri-pytest-8zv_77mq\reports\RKF-01-North-Black-Cotton-Plot-20261005T162952Z-a3761e.pdf`
 - [x] File on disk matches the downloaded bytes -> `b'%PDF-1.4'`
 - [x] PDF page count matches the recorded metadata -> `reader=8 recorded=8`
-- [x] PDF characters extracted -> `17378`
+- [x] PDF characters extracted -> `18203`
 - [x] PDF uses the non-diagnostic risk wording -> `'Environmental conditions favourable for' present=True`
 - [x] PDF contains a references section -> `references heading found`
 - [x] PDF contains a limitations section -> `limitations heading found`

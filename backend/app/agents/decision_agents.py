@@ -130,7 +130,7 @@ class CropRiskAdvisoryAgent(BaseAgent):
                     "The model judges the situation more severe than the rules; the finding set was widened "
                     "to include an explicit model-based watch item."
                 )
-                findings.append(_model_finding(risk_prediction, scan["disclaimer"]))
+                findings.append(_model_finding(risk_prediction, scan["disclaimer"], ctx))
 
         for finding in findings:
             finding["review_status"] = "confirmed_as_favourability_statement"
