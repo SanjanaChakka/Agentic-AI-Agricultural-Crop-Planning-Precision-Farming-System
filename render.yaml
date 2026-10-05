@@ -15,7 +15,12 @@ databases:
     # service sleeps when idle. For anything longer than a demo, switch both to
     # a paid instance.
     plan: free
-    postgresVersion: "16"
+    # Must be a *string*. An unquoted 16 fails schema validation, and
+    # postgresVersion is not a valid key at all.
+    postgresMajorVersion: "16"
+    # Kept in the same region as the service, otherwise every query crosses
+    # continents.
+    region: singapore
 
 services:
   - type: web
