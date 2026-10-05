@@ -5,12 +5,12 @@
 # Build from the repository root:
 #   docker build -f Dockerfile.backend -t agri-backend .
 #
-# The ML artefacts and the FAISS index are *not* committed (they are large,
-# regenerable binaries), so they are produced during the build. Training is
-# deterministic via ML_RANDOM_SEED, so the image is reproducible.
+# The trained models are committed under `backend/app/ml/artifacts`, so the
+# default is to reuse them and build only the (cheap) FAISS knowledge index.
+# Set --build-arg TRAIN_AT_BUILD=true to retrain from scratch instead.
 #
-# To ship a slimmer image that trains on first boot instead, build with:
-#   docker build -f Dockerfile.backend --build-arg TRAIN_AT_BUILD=false .
+# Build from the repository root:
+#   docker build -f Dockerfile.backend -t agri-backend .
 
 # ---------------------------------------------------------------------------
 # Stage 1 - build the regenerable artefacts
@@ -30,13 +30,16 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY backend/ ./
 
-# Pre-train the models and build the knowledge index so the runtime image is
-# self-contained and does no expensive work on first request.
-ARG TRAIN_AT_BUILD=true
+# Reuse the committed models by default; the knowledge index is generated here
+# because it is derived from the corpus and is not committed. Training is
+# deterministic via ML_RANDOM_SEED, so an opt-in retrain is reproducible.
+ARG TRAIN_AT_BUILD=false
 RUN if [ "$TRAIN_AT_BUILD" = "true" ]; then \
         python -m app.ml.train && python -m app.rag.build; \
     else \
-        echo "TRAIN_AT_BUILD=false - the container will train on first boot"; \
+        test -f app/ml/artifacts/soil_moisture_forecast.joblib \
+        || { echo "Committed ML artefacts are missing; rebuild with --build-arg TRAIN_AT_BUILD=true" >&2; exit 1; }; \
+        python -m app.rag.build; \
     fi
 
 # ---------------------------------------------------------------------------

@@ -18,8 +18,10 @@
 **/*.pem
 **/*.key
 
-# Generated at image build time (see Dockerfile.backend) or regenerable.
-backend/app/ml/artifacts/*.joblib
+# Regenerable at image build time, or not needed inside the image.
+# NOTE: the trained .joblib models are deliberately NOT excluded - they are
+# committed to git so a fresh clone and a CI build both have working ML without
+# retraining. Dockerfile.backend reuses them and only rebuilds the RAG index.
 backend/app/ml/artifacts/*.pkl
 backend/app/ml/rag_index/
 backend/agri.db

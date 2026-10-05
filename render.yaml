@@ -1,0 +1,75 @@
+# ---------------------------------------------------------------------------
+# Render Blueprint - backend API + PostgreSQL
+#
+# Deploy with:  New > Blueprint > point at this repository
+#
+# Only the backend lives here. The frontend is a static Vite build and is
+# deployed separately to Vercel (see vercel.json). Because they end up on
+# different origins, CORS_ORIGINS must list the Vercel URL exactly - set it in
+# the Render dashboard after the first deploy, once you know the Vercel domain.
+# ---------------------------------------------------------------------------
+
+databases:
+  - name: agri-db
+    # NOTE: Render's free Postgres expires after 30 days and the free web
+    # service sleeps when idle. For anything longer than a demo, switch both to
+    # a paid instance.
+    plan: free
+    postgresVersion: "16"
+
+services:
+  - type: web
+    name: agri-backend
+    runtime: docker
+    dockerContext: .
+    dockerfilePath: ./Dockerfile.backend
+    plan: free
+    region: singapore
+
+    # The image exposes 8000 and ships its own HEALTHCHECK; this is what Render
+    # polls to decide the deploy is live.
+    healthCheckPath: /api/v1/health/ready
+
+    # Render injects PORT and routes traffic to whatever port is listening, so
+    # the image can keep its own --port 8000.
+    autoDeploy: true
+
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+
+      # Comma-separated exact origins. Replace with your Vercel URL, e.g.
+      #   https://agri-precision-farming.vercel.app
+      # "sync: false" means Render prompts you for it instead of guessing.
+      - key: CORS_ORIGINS
+        sync: false
+
+      # The demo farms/fields are what make the deployed app explorable. Set to
+      # false for a clean production database.
+      - key: SEED_DEMO_DATA_ON_STARTUP
+        value: "true"
+
+      # Open-Meteo is keyless, so live weather and live soil telemetry both work
+      # with no provider account. Leave offline fallback on so a provider outage
+      # degrades to clearly-labelled offline climatology instead of a 500.
+      - key: ALLOW_OFFLINE_WEATHER_FALLBACK
+        value: "true"
+
+      # Advisory narratives are composed deterministically from evidence when no
+      # LLM key is present, so the app is fully functional without one.
+      - key: LLM_ENABLED
+        value: "false"
+
+      # Tables are created by init_db() (SQLAlchemy create_all) on first boot.
+      - key: DATABASE_URL
+        fromDatabase:
+          name: agri-db
+          property: connectionString
+
+      # Generated PDFs land here. Without a disk this directory is ephemeral and
+      # report links break after a restart - attach a disk or accept that.
+      - key: REPORTS_DIR
+        value: /data/reports
+
+      - key: LOG_LEVEL
+        value: INFO
