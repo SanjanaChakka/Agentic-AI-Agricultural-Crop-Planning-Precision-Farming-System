@@ -1,0 +1,6 @@
+low_max,medium_max,moderately_acidic,moderately_alkaline,neutral,parameter,strongly_acidic,strongly_alkaline
+110.0,280.0,,,,nitrogen_available_kg_ha,,
+10.0,25.0,,,,phosphorus_available_kg_ha,,
+110.0,280.0,,,,potassium_available_kg_ha,,
+0.5,0.75,,,,organic_carbon_percent,,
+,,moderately acidic (pH 5.5-6.5),moderately alkaline (pH 7.5-8.5),neutral (pH 6.5-7.5),ph_classes,strongly acidic (pH < 5.5),strongly alkaline (pH > 8.5)

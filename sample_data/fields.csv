@@ -1,0 +1,6 @@
+area_ha,created_at,crop_stage,effective_latitude,effective_longitude,farm_id,field_code,id,irrigation_source,latitude,longitude,name,notes,planting_window_start,previous_crop,proposed_crop,soil_type,updated_at,water_availability,water_availability_m3_per_day
+4.2,2026-10-05T16:04:07.505952Z,flowering,16.21,77.36,1,RKF-01,1,borewell,,,North Black Cotton Plot,Vertisol with high clay content; irrigate only on measured depletion.,,cotton,cotton,black_soil,2026-10-05T16:04:07.505959Z,moderate,180.0
+2.6,2026-10-05T16:04:07.505961Z,vegetative,16.21,77.36,1,RKF-02,2,tank,,,Tank-fed Red Laterite Plot,Low water-holding capacity; sorghum chosen for drought tolerance.,,groundnut,sorghum,red_laterite,2026-10-05T16:04:07.505962Z,limited,70.0
+3.6,2026-10-05T16:04:07.505963Z,maturity,16.21,77.36,1,RKF-03,3,canal,,,Canal-fed Wheat Plot,Post-ri rabi plot receiving canal water.,,rice,wheat,alluvial,2026-10-05T16:04:07.505964Z,abundant,260.0
+2.2,2026-10-05T16:04:07.505965Z,sowing,17.51,78.79,2,SAE-01,4,drip,,,Sandy Loam Onion Plot,Drip irrigated; sandy loam drains fast and needs frequent short cycles.,,onion,groundnut,sandy_loam,2026-10-05T16:04:07.505966Z,seasonal,95.0
+2.1,2026-10-05T16:04:07.505968Z,vegetative,17.51,78.79,2,SAE-02,5,rainfed,,,Loam Pigeonpea Plot,Fully rainfed intercrop plot.,,maize,pigeonpea,loam,2026-10-05T16:04:07.505968Z,none,

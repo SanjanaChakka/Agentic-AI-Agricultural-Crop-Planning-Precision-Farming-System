@@ -1,0 +1,274 @@
+air_humidity_percent,air_temperature_c,battery_percent,field_id,id,is_simulated,notes,quality_flags,recorded_at,sensor_id,soil_moisture_percent,soil_temperature_c
+62.21,30.41,96.9,1,835,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T16:00:00Z,SM-01,35.95,29.59
+61.88,31.27,97.1,1,834,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T13:00:00Z,SM-01,37.06,28.5
+67.47,27.58,97.3,1,833,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T10:00:00Z,SM-01,37.68,25.33
+81.93,23.25,97.4,1,832,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T07:00:00Z,SM-01,37.66,23.3
+80.05,21.7,97.6,1,831,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T04:00:00Z,SM-01,38.79,23.33
+81.86,21.83,97.7,1,830,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-05T01:00:00Z,SM-01,38.9,24.61
+86.95,24.26,97.7,1,829,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T22:00:00Z,SM-01,39.1,27.24
+68.37,30.11,97.8,1,828,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T19:00:00Z,SM-01,39.68,29.62
+69.22,32.22,98.1,1,827,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T16:00:00Z,SM-01,40.48,29.5
+70.92,31.02,98.0,1,826,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T13:00:00Z,SM-01,40.92,29.52
+72.78,28.22,98.2,1,825,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T10:00:00Z,SM-01,41.95,26.27
+77.87,23.91,98.2,1,824,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T07:00:00Z,SM-01,42.33,23.25
+83.24,21.86,98.5,1,823,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-04T04:00:00Z,SM-01,41.87,23.12
+84.03,22.41,98.5,1,822,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",identical_to_previous_reading|simulated,2026-10-04T01:00:00Z,SM-01,42.28,24.41
+84.57,24.18,98.6,1,821,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T22:00:00Z,SM-01,42.28,26.9
+68.81,29.6,98.7,1,820,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T19:00:00Z,SM-01,42.8,29.91
+64.37,30.42,99.0,1,819,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T16:00:00Z,SM-01,43.56,30.46
+62.62,30.71,99.1,1,818,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T13:00:00Z,SM-01,32.59,29.16
+69.78,28.96,99.2,1,817,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T10:00:00Z,SM-01,33.68,25.19
+78.13,24.36,99.2,1,816,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T07:00:00Z,SM-01,34.51,24.03
+84.24,21.49,99.4,1,815,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T04:00:00Z,SM-01,34.59,24.32
+81.83,22.13,99.6,1,814,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-03T01:00:00Z,SM-01,34.55,25.14
+76.76,24.71,99.7,1,813,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-02T22:00:00Z,SM-01,34.95,27.25
+68.1,29.08,99.8,1,812,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-02T19:00:00Z,SM-01,35.17,29.0
+69.72,30.97,99.9,1,811,True,"Simulated telemetry (seed=394201683, step=3.0h, climate baseline 26.6 deg C); rain event 16.6 mm at index 8",simulated,2026-10-02T16:00:00Z,SM-01,35.8,30.03
+66.22,32.29,97.0,2,860,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T16:00:00Z,SM-01,12.54,29.37
+65.34,31.44,95.6,2,74,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T16:00:00Z,SM-02,9.21,29.61
+57.02,32.42,95.8,2,73,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-05T14:00:00Z,SM-02,10.09,28.34
+56.42,32.59,97.1,2,859,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T13:00:00Z,SM-01,13.25,28.18
+64.87,29.89,95.8,2,72,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T12:00:00Z,SM-02,10.09,27.65
+71.11,28.03,97.3,2,858,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T10:00:00Z,SM-01,14.8,25.7
+68.33,28.14,96.0,2,71,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T10:00:00Z,SM-02,9.5,26.04
+83.98,26.28,96.1,2,70,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-05T08:00:00Z,SM-02,9.0,24.64
+76.12,24.89,97.5,2,857,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T07:00:00Z,SM-01,14.93,23.27
+83.22,23.11,96.2,2,69,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-05T06:00:00Z,SM-02,9.0,23.11
+87.34,20.93,97.5,2,856,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T04:00:00Z,SM-01,16.05,23.47
+91.16,21.13,96.4,2,68,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T04:00:00Z,SM-02,9.0,23.32
+76.34,22.31,96.3,2,67,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T02:00:00Z,SM-02,9.47,24.22
+82.04,21.86,97.5,2,855,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-05T01:00:00Z,SM-01,15.95,25.29
+83.84,23.53,96.6,2,66,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-05T00:00:00Z,SM-02,9.22,25.7
+77.61,25.29,97.8,2,854,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T22:00:00Z,SM-01,15.87,27.31
+80.13,25.52,96.6,2,65,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-04T22:00:00Z,SM-02,9.0,27.07
+75.12,28.38,96.7,2,64,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-04T20:00:00Z,SM-02,9.0,29.32
+64.46,30.64,97.8,2,853,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T19:00:00Z,SM-01,16.89,29.98
+71.24,31.39,96.9,2,63,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",identical_to_previous_reading|simulated,2026-10-04T18:00:00Z,SM-02,9.0,29.79
+69.62,31.56,98.0,2,852,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T16:00:00Z,SM-01,18.11,29.45
+68.01,31.83,97.1,2,62,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T16:00:00Z,SM-02,9.0,29.66
+66.11,31.64,97.1,2,61,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T14:00:00Z,SM-02,9.35,28.75
+65.41,30.31,98.1,2,851,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T13:00:00Z,SM-01,18.88,27.13
+70.11,29.83,97.3,2,60,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T12:00:00Z,SM-02,9.3,27.41
+70.42,29.06,98.2,2,850,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T10:00:00Z,SM-01,19.76,25.48
+74.74,27.47,97.4,2,59,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T10:00:00Z,SM-02,9.0,25.0
+74.96,24.9,97.5,2,58,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T08:00:00Z,SM-02,9.21,25.2
+83.0,23.04,98.4,2,849,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T07:00:00Z,SM-01,20.78,23.1
+80.78,23.12,97.7,2,57,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T06:00:00Z,SM-02,9.72,23.24
+83.63,20.94,98.5,2,848,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T04:00:00Z,SM-01,21.15,22.53
+89.68,19.98,97.7,2,56,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T04:00:00Z,SM-02,10.64,23.42
+84.7,22.34,97.8,2,55,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T02:00:00Z,SM-02,10.72,24.17
+83.65,21.91,98.6,2,847,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-04T01:00:00Z,SM-01,21.12,24.5
+79.05,23.1,98.1,2,54,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-04T00:00:00Z,SM-02,11.33,26.55
+79.75,26.45,98.6,2,846,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T22:00:00Z,SM-01,21.97,27.0
+80.05,25.14,98.0,2,53,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T22:00:00Z,SM-02,11.96,27.7
+82.29,26.89,98.2,2,52,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T20:00:00Z,SM-02,12.07,28.88
+72.57,29.24,98.7,2,845,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T19:00:00Z,SM-01,22.33,29.73
+68.27,31.01,98.3,2,51,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T18:00:00Z,SM-02,12.72,29.7
+60.61,32.95,99.0,2,844,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T16:00:00Z,SM-01,23.27,29.67
+58.61,31.64,98.5,2,50,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T16:00:00Z,SM-02,12.79,29.89
+62.53,31.59,98.5,2,49,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T14:00:00Z,SM-02,11.61,28.25
+67.32,31.66,99.1,2,843,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T13:00:00Z,SM-01,17.71,29.02
+61.87,31.06,98.8,2,48,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T12:00:00Z,SM-02,11.66,26.76
+67.99,28.82,99.2,2,842,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T10:00:00Z,SM-01,18.78,25.33
+70.21,27.9,98.8,2,47,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T10:00:00Z,SM-02,12.07,24.83
+77.12,24.07,98.9,2,46,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T08:00:00Z,SM-02,12.15,23.81
+79.88,22.92,99.2,2,841,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T07:00:00Z,SM-01,19.37,23.74
+79.87,22.93,99.1,2,45,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T06:00:00Z,SM-02,12.0,24.06
+80.4,22.5,99.4,2,840,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T04:00:00Z,SM-01,20.04,22.8
+82.78,21.64,99.2,2,44,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T04:00:00Z,SM-02,12.86,22.88
+92.98,20.78,99.3,2,43,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T02:00:00Z,SM-02,12.82,24.3
+91.66,21.45,99.5,2,839,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-03T01:00:00Z,SM-01,20.38,25.02
+81.3,22.99,99.4,2,42,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-03T00:00:00Z,SM-02,13.0,25.13
+77.6,24.35,99.6,2,838,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-02T22:00:00Z,SM-01,20.28,27.85
+71.04,26.92,99.6,2,41,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-02T22:00:00Z,SM-02,13.62,27.21
+72.01,27.27,99.7,2,40,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-02T20:00:00Z,SM-02,13.99,27.89
+71.51,29.69,99.7,2,837,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-02T19:00:00Z,SM-01,21.16,30.03
+70.99,30.13,99.8,2,39,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-02T18:00:00Z,SM-02,14.31,30.15
+66.6,31.38,99.9,2,836,True,"Simulated telemetry (seed=441845009, step=3.0h, climate baseline 26.6 deg C); rain event 7.9 mm at index 8",simulated,2026-10-02T16:00:00Z,SM-01,22.05,30.59
+60.09,31.53,100.0,2,38,True,"Simulated telemetry (seed=20240518, step=2.0h, climate baseline 26.6 deg C); rain event 2.0 mm at index 12; fault injected",simulated,2026-10-02T16:00:00Z,SM-02,14.19,29.53
+58.53,31.54,97.1,3,885,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T16:00:00Z,SM-01,20.5,30.22
+64.67,30.37,95.5,3,111,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T16:00:00Z,SM-03,16.12,30.7
+62.48,32.1,95.8,3,110,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T14:00:00Z,SM-03,15.77,28.82
+67.09,29.18,97.2,3,884,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T13:00:00Z,SM-01,21.67,27.58
+64.7,30.48,95.9,3,109,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T12:00:00Z,SM-03,16.55,27.35
+79.09,27.97,97.2,3,883,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T10:00:00Z,SM-01,21.66,26.88
+69.38,27.89,96.0,3,108,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T10:00:00Z,SM-03,16.84,26.28
+84.07,24.46,96.1,3,107,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T08:00:00Z,SM-03,16.39,24.33
+77.87,23.66,97.4,3,882,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T07:00:00Z,SM-01,22.66,24.37
+86.22,24.45,96.3,3,106,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T06:00:00Z,SM-03,15.92,23.03
+84.72,21.35,97.6,3,881,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T04:00:00Z,SM-01,22.93,23.68
+83.43,22.07,96.4,3,105,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T04:00:00Z,SM-03,16.53,23.19
+90.57,20.83,96.3,3,104,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T02:00:00Z,SM-03,16.28,24.9
+80.95,21.66,97.5,3,880,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-05T01:00:00Z,SM-01,23.31,25.19
+88.23,23.97,96.5,3,103,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-05T00:00:00Z,SM-03,16.0,25.76
+73.53,25.35,97.8,3,879,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T22:00:00Z,SM-01,23.92,26.92
+74.48,25.24,96.7,3,102,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T22:00:00Z,SM-03,16.31,27.3
+67.74,28.15,96.9,3,101,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T20:00:00Z,SM-03,16.38,29.27
+63.94,30.28,97.9,3,878,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T19:00:00Z,SM-01,24.32,28.87
+64.11,29.67,96.9,3,100,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T18:00:00Z,SM-03,16.68,29.93
+67.27,32.58,98.1,3,877,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T16:00:00Z,SM-01,24.67,29.04
+64.23,32.1,97.0,3,99,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T16:00:00Z,SM-03,16.59,29.22
+63.01,32.11,97.2,3,98,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T14:00:00Z,SM-03,17.67,28.64
+63.16,32.41,98.1,3,876,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T13:00:00Z,SM-01,25.68,28.46
+65.04,30.1,97.3,3,97,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T12:00:00Z,SM-03,17.74,27.11
+66.91,28.83,98.3,3,875,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T10:00:00Z,SM-01,26.17,25.72
+74.49,28.64,97.4,3,96,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T10:00:00Z,SM-03,18.41,25.94
+74.94,24.95,97.6,3,95,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T08:00:00Z,SM-03,19.2,24.5
+76.32,24.19,98.4,3,874,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T07:00:00Z,SM-01,26.5,23.17
+78.5,22.98,97.5,3,94,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T06:00:00Z,SM-03,19.49,24.4
+86.34,21.2,98.6,3,873,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T04:00:00Z,SM-01,26.46,23.19
+79.28,22.14,97.7,3,93,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T04:00:00Z,SM-03,19.2,22.55
+96.86,20.05,97.8,3,92,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T02:00:00Z,SM-03,19.11,24.42
+84.1,21.98,98.5,3,872,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-04T01:00:00Z,SM-01,26.14,25.29
+85.12,22.72,98.0,3,91,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-04T00:00:00Z,SM-03,19.13,26.11
+81.55,23.99,98.8,3,871,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T22:00:00Z,SM-01,26.08,27.25
+84.93,24.32,98.1,3,90,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T22:00:00Z,SM-03,18.98,26.86
+73.4,28.35,98.2,3,89,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T20:00:00Z,SM-03,18.89,28.68
+70.38,28.84,98.8,3,870,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T19:00:00Z,SM-01,25.88,29.67
+67.59,30.18,98.3,3,88,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T18:00:00Z,SM-03,19.96,30.36
+63.79,32.21,99.0,3,869,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T16:00:00Z,SM-01,26.68,30.06
+63.34,31.92,98.4,3,87,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T16:00:00Z,SM-03,20.71,31.23
+67.53,31.77,98.5,3,86,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T14:00:00Z,SM-03,21.86,28.93
+67.13,30.33,99.0,3,868,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T13:00:00Z,SM-01,26.66,27.81
+65.04,29.88,98.7,3,85,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T12:00:00Z,SM-03,22.42,27.42
+60.91,28.25,99.2,3,867,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T10:00:00Z,SM-01,27.35,26.24
+61.88,28.65,98.9,3,84,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T10:00:00Z,SM-03,22.8,25.66
+75.58,24.94,98.8,3,83,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T08:00:00Z,SM-03,23.48,23.77
+76.16,25.19,99.3,3,866,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T07:00:00Z,SM-01,27.81,23.97
+81.74,22.68,99.0,3,82,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T06:00:00Z,SM-03,23.99,24.23
+88.69,21.7,99.5,3,865,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T04:00:00Z,SM-01,27.88,23.44
+83.46,21.36,99.3,3,81,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T04:00:00Z,SM-03,24.76,23.11
+84.19,21.39,99.4,3,80,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T02:00:00Z,SM-03,25.53,24.56
+85.99,22.31,99.6,3,864,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-03T01:00:00Z,SM-01,28.43,23.97
+84.69,23.88,99.5,3,79,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-03T00:00:00Z,SM-03,25.71,26.27
+74.44,25.08,99.7,3,863,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-02T22:00:00Z,SM-01,29.42,26.89
+81.59,25.61,99.6,3,78,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-02T22:00:00Z,SM-03,26.61,27.08
+73.24,28.46,99.7,3,77,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-02T20:00:00Z,SM-03,26.99,28.03
+68.32,29.57,99.8,3,862,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-02T19:00:00Z,SM-01,29.85,29.69
+76.47,28.74,99.8,3,76,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-02T18:00:00Z,SM-03,27.65,29.75
+58.65,31.19,99.9,3,861,True,"Simulated telemetry (seed=355386757, step=3.0h, climate baseline 26.6 deg C); rain event 1.3 mm at index 8",simulated,2026-10-02T16:00:00Z,SM-01,30.48,29.55
+62.25,32.59,99.9,3,75,True,"Simulated telemetry (seed=20240519, step=2.0h, climate baseline 26.6 deg C)",simulated,2026-10-02T16:00:00Z,SM-03,28.28,29.63
+72.51,31.43,97.1,4,910,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T16:00:00Z,SM-01,19.77,29.94
+60.42,31.33,95.5,4,148,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T16:00:00Z,SM-04,15.65,30.31
+59.99,32.68,95.6,4,147,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T14:00:00Z,SM-04,15.84,28.75
+66.46,32.46,97.1,4,909,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T13:00:00Z,SM-01,21.22,28.2
+63.43,30.57,95.8,4,146,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T12:00:00Z,SM-04,16.77,27.75
+71.45,29.45,97.2,4,908,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T10:00:00Z,SM-01,22.67,26.17
+69.04,29.31,96.0,4,145,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T10:00:00Z,SM-04,16.47,26.89
+74.26,24.11,96.0,4,144,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T08:00:00Z,SM-04,17.02,24.77
+77.88,24.04,97.4,4,907,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T07:00:00Z,SM-01,22.93,23.44
+82.5,23.01,96.2,4,143,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T06:00:00Z,SM-04,16.96,24.03
+78.29,21.29,97.6,4,906,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T04:00:00Z,SM-01,23.01,24.62
+81.03,21.66,96.4,4,142,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T04:00:00Z,SM-04,17.58,24.17
+74.85,21.88,96.4,4,141,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T02:00:00Z,SM-04,17.82,24.0
+85.54,22.45,97.7,4,905,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-05T01:00:00Z,SM-01,23.61,24.97
+83.39,23.16,96.4,4,140,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-05T00:00:00Z,SM-04,17.89,25.62
+80.19,24.47,97.8,4,904,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T22:00:00Z,SM-01,24.05,27.75
+78.56,24.89,96.6,4,139,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T22:00:00Z,SM-04,18.06,27.33
+71.87,27.72,96.7,4,138,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T20:00:00Z,SM-04,18.48,28.96
+64.36,29.7,97.8,4,903,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T19:00:00Z,SM-01,24.27,29.68
+65.91,31.13,97.0,4,137,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T18:00:00Z,SM-04,18.95,30.11
+64.16,32.02,98.0,4,902,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T16:00:00Z,SM-01,24.93,30.41
+65.87,32.19,96.9,4,136,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T16:00:00Z,SM-04,18.88,29.77
+61.36,33.12,97.1,4,135,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T14:00:00Z,SM-04,19.44,29.15
+63.12,31.28,98.1,4,901,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T13:00:00Z,SM-01,25.53,28.79
+72.72,28.86,97.2,4,134,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T12:00:00Z,SM-04,20.16,27.23
+68.21,28.8,98.3,4,900,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T10:00:00Z,SM-01,26.4,26.62
+72.28,27.69,97.4,4,133,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T10:00:00Z,SM-04,20.5,24.55
+75.18,25.24,97.5,4,132,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T08:00:00Z,SM-04,21.33,24.67
+71.25,25.01,98.4,4,899,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T07:00:00Z,SM-01,26.54,23.44
+80.31,22.62,97.6,4,131,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T06:00:00Z,SM-04,22.17,23.31
+81.97,22.96,98.5,4,898,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T04:00:00Z,SM-01,27.03,23.91
+77.89,21.11,97.8,4,130,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T04:00:00Z,SM-04,22.13,22.86
+85.35,21.7,98.0,4,129,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T02:00:00Z,SM-04,22.75,24.44
+80.08,23.23,98.5,4,897,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-04T01:00:00Z,SM-01,26.34,25.14
+84.82,22.08,98.0,4,128,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-04T00:00:00Z,SM-04,22.14,25.68
+80.51,25.53,98.8,4,896,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T22:00:00Z,SM-01,26.75,27.56
+82.48,25.06,98.1,4,127,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T22:00:00Z,SM-04,22.82,28.56
+79.11,27.46,98.2,4,126,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T20:00:00Z,SM-04,23.28,28.56
+66.93,29.51,98.8,4,895,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T19:00:00Z,SM-01,27.78,29.41
+63.21,30.93,98.3,4,125,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T18:00:00Z,SM-04,23.41,30.25
+56.58,32.58,99.0,4,894,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T16:00:00Z,SM-01,28.81,31.02
+67.45,30.84,98.4,4,124,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T16:00:00Z,SM-04,24.8,29.54
+58.96,32.27,98.6,4,123,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T14:00:00Z,SM-04,15.08,29.68
+65.63,31.01,99.1,4,893,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T13:00:00Z,SM-01,20.22,28.23
+70.39,30.5,98.7,4,122,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T12:00:00Z,SM-04,15.91,27.15
+66.95,26.73,99.2,4,892,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T10:00:00Z,SM-01,20.6,25.42
+78.58,27.53,98.9,4,121,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T10:00:00Z,SM-04,15.64,24.34
+80.07,25.85,98.9,4,120,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T08:00:00Z,SM-04,15.69,24.11
+80.77,24.83,99.3,4,891,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T07:00:00Z,SM-01,21.25,23.24
+84.59,23.18,99.1,4,119,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T06:00:00Z,SM-04,15.41,23.82
+80.95,20.94,99.5,4,890,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T04:00:00Z,SM-01,22.02,22.86
+91.41,21.83,99.1,4,118,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T04:00:00Z,SM-04,15.81,23.75
+84.64,22.61,99.4,4,117,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T02:00:00Z,SM-04,16.3,25.03
+88.3,22.03,99.5,4,889,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-03T01:00:00Z,SM-01,21.85,24.97
+77.94,24.45,99.4,4,116,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-03T00:00:00Z,SM-04,15.98,26.17
+76.05,24.32,99.6,4,888,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-02T22:00:00Z,SM-01,21.61,27.21
+79.7,24.76,99.6,4,115,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-02T22:00:00Z,SM-04,16.49,28.4
+70.37,28.34,99.7,4,114,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-02T20:00:00Z,SM-04,16.71,28.89
+70.34,29.35,99.7,4,887,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-02T19:00:00Z,SM-01,21.81,30.47
+67.22,29.76,99.8,4,113,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-02T18:00:00Z,SM-04,17.36,30.31
+59.22,32.93,99.9,4,886,True,"Simulated telemetry (seed=383610747, step=3.0h, climate baseline 26.6 deg C); rain event 25.0 mm at index 8",simulated,2026-10-02T16:00:00Z,SM-01,22.67,29.88
+61.63,32.3,99.8,4,112,True,"Simulated telemetry (seed=20240520, step=2.0h, climate baseline 26.6 deg C); rain event 12.9 mm at index 12",simulated,2026-10-02T16:00:00Z,SM-04,18.28,30.42
+72.59,31.31,97.0,5,935,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T16:00:00Z,SM-01,21.59,30.15
+55.07,32.78,95.5,5,185,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T16:00:00Z,SM-05,27.78,29.88
+63.47,31.99,95.6,5,184,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T14:00:00Z,SM-05,28.25,28.81
+71.88,30.45,97.2,5,934,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T13:00:00Z,SM-01,22.07,28.49
+66.58,30.22,95.8,5,183,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T12:00:00Z,SM-05,28.89,27.25
+67.97,27.63,97.2,5,933,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T10:00:00Z,SM-01,22.66,25.5
+73.11,28.56,96.0,5,182,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T10:00:00Z,SM-05,30.07,25.38
+76.08,25.13,96.1,5,181,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T08:00:00Z,SM-05,30.51,23.14
+84.5,23.68,97.4,5,932,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T07:00:00Z,SM-01,22.77,23.59
+74.45,23.96,96.2,5,180,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T06:00:00Z,SM-05,30.94,23.5
+83.06,21.92,97.6,5,931,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T04:00:00Z,SM-01,23.44,23.76
+87.98,20.46,96.4,5,179,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T04:00:00Z,SM-05,31.09,23.16
+85.7,21.81,96.5,5,178,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T02:00:00Z,SM-05,31.32,23.84
+82.78,21.37,97.6,5,930,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-05T01:00:00Z,SM-01,24.09,24.6
+79.9,22.63,96.5,5,177,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-05T00:00:00Z,SM-05,31.41,25.44
+85.68,25.39,97.8,5,929,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T22:00:00Z,SM-01,24.31,27.64
+76.83,25.35,96.7,5,176,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T22:00:00Z,SM-05,32.12,28.03
+71.87,28.79,96.8,5,175,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T20:00:00Z,SM-05,32.17,28.73
+60.63,30.2,97.9,5,928,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T19:00:00Z,SM-01,25.28,29.44
+68.44,31.0,97.0,5,174,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T18:00:00Z,SM-05,32.21,30.55
+66.23,30.27,98.0,5,927,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T16:00:00Z,SM-01,25.98,30.2
+62.98,30.83,96.9,5,173,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T16:00:00Z,SM-05,32.41,29.5
+59.18,31.59,97.2,5,172,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T14:00:00Z,SM-05,32.38,29.24
+66.72,29.74,98.1,5,926,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T13:00:00Z,SM-01,27.03,29.08
+71.76,30.0,97.3,5,171,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T12:00:00Z,SM-05,33.24,27.97
+72.3,28.12,98.3,5,925,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T10:00:00Z,SM-01,27.94,26.9
+72.11,28.15,97.5,5,170,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T10:00:00Z,SM-05,33.61,26.4
+78.55,25.05,97.6,5,169,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T08:00:00Z,SM-05,34.16,23.21
+81.52,23.87,98.4,5,924,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T07:00:00Z,SM-01,28.39,23.93
+91.23,23.08,97.6,5,168,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T06:00:00Z,SM-05,34.87,23.74
+80.6,22.69,98.5,5,923,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T04:00:00Z,SM-01,28.49,23.48
+86.57,22.97,97.7,5,167,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T04:00:00Z,SM-05,34.88,22.1
+85.41,21.02,97.9,5,166,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T02:00:00Z,SM-05,35.28,24.01
+75.71,22.23,98.5,5,922,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-04T01:00:00Z,SM-01,28.98,26.09
+79.23,23.35,98.0,5,165,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-04T00:00:00Z,SM-05,35.12,25.75
+73.68,24.6,98.8,5,921,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T22:00:00Z,SM-01,29.44,26.53
+79.74,25.14,98.2,5,164,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T22:00:00Z,SM-05,35.64,28.34
+71.7,28.28,98.2,5,163,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T20:00:00Z,SM-05,35.94,29.38
+67.05,28.69,98.7,5,920,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T19:00:00Z,SM-01,29.88,29.95
+64.95,31.22,98.3,5,162,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T18:00:00Z,SM-05,35.65,29.6
+57.02,31.58,98.9,5,919,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T16:00:00Z,SM-01,30.69,29.65
+63.56,30.32,98.5,5,161,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T16:00:00Z,SM-05,36.39,30.31
+58.24,31.07,98.5,5,160,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T14:00:00Z,SM-05,23.6,29.06
+59.78,30.47,99.1,5,918,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T13:00:00Z,SM-01,25.3,28.07
+63.28,31.06,98.8,5,159,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T12:00:00Z,SM-05,24.09,27.45
+71.18,28.0,99.2,5,917,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T10:00:00Z,SM-01,26.27,24.85
+72.49,27.89,98.8,5,158,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T10:00:00Z,SM-05,23.72,25.64
+77.22,25.47,98.9,5,157,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T08:00:00Z,SM-05,24.07,24.12
+78.5,24.3,99.3,5,916,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T07:00:00Z,SM-01,27.29,23.82
+90.51,22.37,99.0,5,156,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T06:00:00Z,SM-05,23.86,23.16
+84.07,21.29,99.3,5,915,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T04:00:00Z,SM-01,27.67,23.26
+88.01,22.28,99.1,5,155,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T04:00:00Z,SM-05,24.35,23.07
+85.2,22.7,99.2,5,154,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T02:00:00Z,SM-05,24.26,24.27
+81.53,22.05,99.5,5,914,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-03T01:00:00Z,SM-01,27.91,25.09
+82.87,23.4,99.4,5,153,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-03T00:00:00Z,SM-05,24.85,26.76
+82.86,23.77,99.7,5,913,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-02T22:00:00Z,SM-01,28.73,27.66
+79.67,25.09,99.4,5,152,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-02T22:00:00Z,SM-05,25.48,27.21
+77.08,27.73,99.6,5,151,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-02T20:00:00Z,SM-05,26.08,29.15
+60.93,29.89,99.8,5,912,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-02T19:00:00Z,SM-01,29.07,29.9
+68.69,30.61,99.8,5,150,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-02T18:00:00Z,SM-05,26.47,30.18
+65.76,31.74,99.8,5,911,True,"Simulated telemetry (seed=975658002, step=3.0h, climate baseline 26.6 deg C); rain event 7.6 mm at index 8",simulated,2026-10-02T16:00:00Z,SM-01,29.7,29.67
+63.24,31.2,99.9,5,149,True,"Simulated telemetry (seed=20240521, step=2.0h, climate baseline 26.6 deg C); rain event 21.5 mm at index 12",simulated,2026-10-02T16:00:00Z,SM-05,27.04,30.45

@@ -82,13 +82,71 @@ patch is merged into the shared context before the next step reads it.
 
 ## Architecture
 
+```mermaid
+flowchart TD
+    subgraph Inputs["Farm / Soil / Sensor Data"]
+        F[Farm & Field registry]
+        S[Soil test records]
+        I[IoT sensor streams<br/>simulated + Open-Meteo soil model]
+        O[Field observations<br/>human-in-the-loop notes]
+    end
+
+    W[Weather API<br/>Open-Meteo keyless live]
+
+    F & S & I & O --> DP[Data processing & validation<br/>measured vs interpreted]
+    W --> DP
+
+    DP --> ORCH[LangGraph workflow orchestrator<br/>state management + tool calling]
+
+    subgraph Agents["Specialized agents"]
+        A1[1 Farm & Field Profile]
+        A2[2 Soil & Nutrient Analysis]
+        A3[3 Weather & Climate Analysis]
+        A4[4 Crop Planning & Suitability]
+        A5[5 Irrigation Planning]
+        A6[6 Crop Risk & Farm Advisory]
+    end
+
+    ORCH --> Agents
+
+    A1 & A2 --> RAG[(RAG knowledge base<br/>FAISS + keyfact retrieval<br/>source traceability)]
+    A3 & A4 --> RAG
+    A5 & A6 --> RAG
+
+    A1 & A2 & A3 --> DB[(PostgreSQL<br/>SQLAlchemy ORM)]
+
+    A2 --> ML[ML models<br/>soil moisture forecast<br/>environmental risk classifier]
+    A3 --> ML
+    ML --> A4
+    ML --> A5
+    ML --> A6
+
+    Agents --> ADV[Advisory engine<br/>suitability + irrigation + risk]
+
+    ADV --> HITL[Human review gate<br/>approve / reject / modify]
+    HITL --> PLAN[Farm activity planner]
+    HITL --> RPT[Report generation<br/>PDF + source references]
+    HITL --> DB
+
+    DB --> DASH[React dashboard<br/>Recharts + TanStack Query]
+
+    RPT --> DASH
+    PLAN --> DASH
+```
+
+Data flows one way through the advisory engine into a **human review gate**: no
+agent can trigger irrigation or chemical application, because those writes only
+happen after a review decision is recorded.
+
+### Layering
+
 ```
 ┌─────────────────────────────────────────────────────────┐
 │  React + Vite + TanStack Query + Recharts   (frontend)  │
 └───────────────────────────┬─────────────────────────────┘
                             │  /api/v1  (JSON)
 ┌───────────────────────────▼─────────────────────────────┐
-│  FastAPI routers  ·  69 paths under /api/v1               │
+│  FastAPI routers  ·  71 paths under /api/v1               │
 │  ─────────────────────────────────────────────────────  │
 │  services/     business logic, no HTTP concerns          │
 │  agents/       LangGraph workflow, 6 agents        │
@@ -98,12 +156,12 @@ patch is merged into the shared context before the next step reads it.
 │  data/         crop catalog + knowledge documents        │
 └───────────────────────────┬─────────────────────────────┘
                             │
-              SQLite (default) │ PostgreSQL (optional)
+              SQLite (default) │ PostgreSQL (production)
 ```
 
 Layering rule: `api/` depends on `services/`, never the reverse. Agents call
 services. Services never import FastAPI request objects, which is what makes the
-124-test suite fast and the logic reusable from scripts.
+132-test suite fast and the logic reusable from scripts.
 
 ## Safety contract
 
@@ -454,6 +512,14 @@ Three things that silently break this:
 
 `render.yaml` in the repo root is an equivalent one-file alternative to the
 dashboard flow above; it is validated against Render's published Blueprint schema.
+
+### Sample dataset
+
+`sample_data/` holds a demonstration dataset covering varied soil conditions,
+multiple crops, weather variation, soil-moisture change, irrigation events and
+environmental-risk scenarios. It is exported from a live backend by
+`scripts/export_sample_data.py`, so the rows are what the application actually
+stores rather than hand-authored fixtures. See `sample_data/README.md`.
 
 ## Known limitations
 

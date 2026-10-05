@@ -1,0 +1,22 @@
+condition,et0_mm,forecast_date,humidity_percent,location,precipitation_mm,precipitation_probability_percent,temp_max_c,temp_min_c,temperature_mean_c,wind_speed_ms
+clear sky,5.51,2026-10-05T00:00:00Z,46.0,Hyderabad_IN,0.0,0.0,33.4,24.0,28.7,3.36
+mainly clear,5.95,2026-10-06T00:00:00Z,44.0,Hyderabad_IN,0.0,4.0,33.7,23.4,28.55,3.56
+mainly clear,5.39,2026-10-07T00:00:00Z,54.0,Hyderabad_IN,0.0,31.0,32.9,23.9,28.4,3.17
+moderate drizzle,5.0,2026-10-08T00:00:00Z,57.0,Hyderabad_IN,2.3,26.0,32.8,24.0,28.4,2.83
+mainly clear,5.42,2026-10-09T00:00:00Z,52.0,Hyderabad_IN,0.0,14.0,33.4,24.4,28.9,3.28
+clear sky,5.8,2026-10-10T00:00:00Z,49.0,Hyderabad_IN,0.0,2.0,33.6,24.4,29.0,4.06
+light drizzle,5.5,2026-10-11T00:00:00Z,52.0,Hyderabad_IN,0.6,10.0,31.7,23.7,27.7,3.44
+light drizzle,4.6,2026-10-05T00:00:00Z,63.0,Warangal_IN,0.2,2.0,31.8,23.0,27.4,2.89
+light drizzle,4.97,2026-10-06T00:00:00Z,59.0,Warangal_IN,0.1,10.0,32.8,22.7,27.75,3.0
+light drizzle,4.81,2026-10-07T00:00:00Z,67.0,Warangal_IN,0.5,37.0,32.3,22.8,27.55,2.28
+mainly clear,4.79,2026-10-08T00:00:00Z,69.0,Warangal_IN,0.0,2.0,32.8,23.3,28.05,3.14
+clear sky,4.86,2026-10-09T00:00:00Z,65.0,Warangal_IN,0.0,4.0,32.9,23.5,28.2,2.89
+clear sky,5.09,2026-10-10T00:00:00Z,59.0,Warangal_IN,0.0,2.0,33.1,23.7,28.4,3.0
+light drizzle,4.84,2026-10-11T00:00:00Z,61.0,Warangal_IN,0.6,12.0,32.5,22.6,27.55,2.81
+light drizzle,3.79,2026-10-05T00:00:00Z,83.0,Kochi_IN,1.7,83.0,32.0,25.6,28.8,2.75
+moderate drizzle,4.62,2026-10-06T00:00:00Z,82.0,Kochi_IN,2.2,58.0,31.2,25.4,28.3,2.72
+thunderstorm,4.54,2026-10-07T00:00:00Z,87.0,Kochi_IN,6.5,85.0,31.3,25.0,28.15,3.72
+moderate drizzle,3.93,2026-10-08T00:00:00Z,87.0,Kochi_IN,1.6,49.0,30.2,25.1,27.65,2.47
+light drizzle,3.52,2026-10-09T00:00:00Z,86.0,Kochi_IN,1.8,76.0,28.7,25.1,26.9,3.86
+thunderstorm,3.5,2026-10-10T00:00:00Z,91.0,Kochi_IN,6.0,88.0,29.6,24.6,27.1,2.83
+light drizzle,4.13,2026-10-11T00:00:00Z,89.0,Kochi_IN,0.6,32.0,29.8,24.7,27.25,2.56
